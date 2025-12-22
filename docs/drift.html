@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Genetic Drift – Fundamentals of Population and Conservation Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ne.html" rel="next">
+<link href="./more_selection.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./drift.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Genetic Drift</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of Population and Conservation Genetics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A Brief History of Conservation Genetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diversity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How do we study genetic diversity?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hwe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hardy-Weinberg Principle (or equilibirum, or proportions…)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ld.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Linkage Disequilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quantitative Genetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Natural selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./more_selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Mutation, migration, and selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Genetic Drift</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Effective Population Size</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./coalescent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Coalescent</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inbreeding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inbreeding and Inbreeding Depression</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Population Subdivision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./viability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genetic Viability</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Taxonomy, Systematics, and Management Units</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hybrids.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Hybridization</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#drift-and-heterozygosity" id="toc-drift-and-heterozygosity" class="nav-link active" data-scroll-target="#drift-and-heterozygosity"><span class="header-section-number">9.1</span> Drift and Heterozygosity</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Genetic Drift</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The next assumption of HWP we will violate is that of infinite population sizes. When populations are sufficient large in size, the allele frequency dynamics are more or less deterministically driven by mutation, migration, and selection. With finite populations (and particularly with small populations), chance events begin to take on greater importance. This is of particular interest to us because conservation genetics is, in essence, the population genetics of small populations of conservation concern. In Montana, for instance, there only ~350 Black Footed Ferrets remaining, only ~500 Kootenai sturgeon, and only ~320 whooping cranes. The International Union for the Conservation of Nature (IUCN) considers a species critically endangered if there are fewer than 50 individuals, endangered if there are fewer than 250, and vulnerable if there are fewer than 1000.</p>
+<p>The primary mechanism for the shift away from deterministic dynamics is sampling error of gametes. Consider two crosses between sexually reproducing diploid individuals at a single triallelic locus: an <span class="math inline">\(A_1A_1\)</span> x <span class="math inline">\(A_1A_2\)</span> cross, and an <span class="math inline">\(A_1A_3\)</span> x <span class="math inline">\(A_1A_2\)</span> cross. In this parental generation, allele frequencies are <span class="math inline">\(p=0.5\)</span>, <span class="math inline">\(q=0.375\)</span>, and <span class="math inline">\(r=0.125\)</span>. The first pair then has three offspring, formed by each parent randomly contributing one of their two alleles. The genotypes of these offspring are <span class="math inline">\(A_1A_1\)</span>, <span class="math inline">\(A_1A_2\)</span>, and <span class="math inline">\(A_1A_2\)</span>. The second pair has a single child, with genotype <span class="math inline">\(A_1A_1\)</span>. While this new generation has the same population size and total number of alleles or chromosomes, allele frequencies have changed to <span class="math inline">\(p=0.75\)</span>, <span class="math inline">\(q=0\)</span>, and <span class="math inline">\(r=0\)</span>.</p>
+<p>You will notice that since <span class="math inline">\(r=0\)</span>, the allele has disappeared from the population. We describe this as its <em>loss</em>: the alternative scenario, in which an allele reaches a frequency of 1.0, is termed <em>fixation</em>. To develop intuition about the relationship between population size and the probability of fixation or loss of an allele, using a simulation tool (like CJ Battey’s <a href="https://cjbattey.shinyapps.io/driftR/">driftR</a>) is helpful. More formally, we can we model the expected distribution of allele frequencies for a given number of gametes using the <em>binomial distribution</em>.</p>
+<p>Let’s start by revisiting Hardy-Weinberg proportions. As usual, we have two alleles (<span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span>) at frequencies <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>. What is the probability that a single individual (<span class="math inline">\(N=1\)</span>) will have a particular genotype? We can determine this by the binomial expansion of <span class="math inline">\((p + q)^{2N}=(p+q)^2\)</span>. The reason is that we have two chances (one allele from both mom and dad, i.e.&nbsp;the exponent) at one of two possible outcomes (receiving either allele <span class="math inline">\(A_1\)</span>, which will occur with a probability proportional to its frequency, <span class="math inline">\(p\)</span>, or <span class="math inline">\(A_2\)</span>, which will occur with a probability proportional to <span class="math inline">\(q\)</span>):</p>
+<p><span class="math display">\[
+(p + q)^2 = (p + q)(p + q) = p^2 + pq + qp + q^2
+\]</span></p>
+<p>We see our for outcomes: <span class="math inline">\(p^2\)</span>, <span class="math inline">\(pq\)</span>, <span class="math inline">\(qp\)</span>, and <span class="math inline">\(q^2\)</span>. (Typically, <span class="math inline">\(pq\)</span> + <span class="math inline">\(qp\)</span> are lumped into the more familiar <span class="math inline">\(2pq\)</span>.) For a single individual, the probability (which you can think of as “expected frequency if there were only one outcome”) of having each genotype is therefore <span class="math inline">\(\frac{1}{4}=0.25\)</span>. But what if we have 2 individuals instead? Our binomial expansion will then be raised to a power of <span class="math inline">\(2N=4\)</span>:</p>
+<p><span class="math display">\[
+(p + q)^4 = (p + q)(p + q)(p + q)(p + q) = p^4 + 4p^3q + 6p^2q^2 + 4pq^3 +q^4
+\]</span></p>
+<p>You can see how this quickly gets complicated. The probability of getting 4 copies of <span class="math inline">\(A_1\)</span> (out of 4 total alleles in 2 individuals) is <span class="math inline">\(p^4\)</span>, the probability of getting 3 <span class="math inline">\(p\)</span>s and 1 <span class="math inline">\(q\)</span> is <span class="math inline">\(4p^3q\)</span>, etc. But how can we generalize this for larger population sizes without the prohibitively tedious process of manually solving the binomial expansion? The formula for the binomial distribution provides us with a shortcut:</p>
+<p><span class="math display">\[
+{2N \choose K}p^Kq^{2N-K}
+\]</span></p>
+<p>This formula gives you the probability of there being exactly <span class="math inline">\(K\)</span> copies of an allele with frequency <span class="math inline">\(p\)</span> given <span class="math inline">\(2N\)</span> gametes. Here, <span class="math inline">\({2N \choose K}\)</span> is read “2N choose K” and is equivalent to <span class="math inline">\(\frac{2N!}{K!(2N-K)!}\)</span>. <span class="math inline">\(q\)</span> is the frequency of the alternate allele (the binomial expansion only works for diallelic loci). We can return to our example above to demonstrate its use. What, then is the probability of getting 3 copies of allele <span class="math inline">\(A_1\)</span> given <span class="math inline">\(2N=4\)</span> and allele frequencies of <span class="math inline">\(p=0.5\)</span> and <span class="math inline">\(q=0.5\)</span>?</p>
+<p><span class="math display">\[
+{4 \choose 3}0.5^30.5^{4-3} = \frac{4!}{3!(4-3)!}0.5^30.5^1 = \frac{4*3*2*1}{3*2*1*(1)}0.125*0.5 =0.25
+\]</span></p>
+<p>Importantly, this is exactly equal to the term in the binomial expansion demonstrated above: <span class="math inline">\(4p^3q = 4*0.5^3*0.5 = 0.25\)</span>.</p>
+<p>The variance of the distribution is <span class="math inline">\(\sigma = \frac{p_0q_0}{2N}\)</span>, or the initial allele frequencies over the number of alleles in the population. It is maximized when <span class="math inline">\(p_0=q_0\)</span> and <span class="math inline">\(2N=2\)</span>, which tells us genetic drift (random change in alelle frequencies due to sampling error) is strongest in small populations with relatively equal frequencies at diallelic alleles. You can build intuition about the binomial distribution by playing around with frequencies (“probability of success”) and number of alleles (“number of Bernoulli trials”) using this app: https://istats.shinyapps.io/BinomialDist/.</p>
+<p>A simple extension of the binomial distribution is that the probability of fixation of an allele is given by its frequency to the <span class="math inline">\(2N\)</span> power, i.e.&nbsp;<span class="math inline">\(p^{2N}\)</span>. Conversely, the probability of its loss is its complement to the <span class="math inline">\(2N\)</span> power, ie. <span class="math inline">\((1 - p)^{2N}\)</span>.</p>
+<p>A different way to arrive at this result using the building blocks of an area of population genetics known as <strong>coalescent theory</strong>, which we will discuss in greater length shortly. First, let’s (re)define familiar terms. In a single individual, homozygosity and heterozygosity in an refer to the state of having identical or different alleles at a given locus (respectively). In a randomly mating population, however, homozygosity refers to the probability two alleles drawn at random are identical (<span class="math inline">\(p^2 + q^2\)</span>) or different (<span class="math inline">\(2pq\)</span>). As indicated in the parentheses, these probabilities are given by terms from Hardy-Weinberg proportions.</p>
+<p>Given this reminder, consider a single-generation population bottleneck of size <span class="math inline">\(N\)</span>, where a formerly large population is reduced to small numbers (Figure 1). The subsequent generation (<span class="math inline">\(t+1\)</span>) will be formed from the <span class="math inline">\(2N\)</span> alleles present during the bottleneck. Selecting any two alleles in different individuals at random in generation <span class="math inline">\(t+1\)</span>, the probability that they came from the same parental copy—in other words, are <strong>identical by descent</strong>—is simply 1 out of the total number of parental alleles, i.e.&nbsp;<span class="math inline">\(\frac{1}{2N}\)</span>. (To make this more intuitive, select an allele in <span class="math inline">\(t+1\)</span> and its ancestor in <span class="math inline">\(t\)</span>, then select a second allele in <span class="math inline">\(t+1\)</span>. That second allele has <span class="math inline">\(2N\)</span> possible ancestors, with a <span class="math inline">\(1/2N\)</span> probability of the same ancestor as your first allele.)</p>
+<p>Of course, other alleles may be <strong>identical by state</strong> (e.g., both be <span class="math inline">\(A_1s\)</span>) but come from different parents. These will result in homozygotes, but not change their overall frequency.</p>
+<p><img src="images/het_loss.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Drift in *Lycaeides idas* butterflies">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Drift in <em>Lycaeides idas</em> butterflies
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Drift constantly shapes allele frequencies in finite natural popualtions, but can be difficult to detect without temporal comparisons. Zach Gompert and colleagues (<span class="citation" data-cites="gompert2021genomic">Gompert et al. (<a href="references.html#ref-gompert2021genomic" role="doc-biblioref">2021</a>)</span>) used population genomic time series data from from ten <em>Lycaeides idas</em> butterfly subpopulations in the Greater Yellowstone Ecosystem to test the hypothesis that gene flow over larger timescales maintained genetic diversity but did not impact generation to generation evolution. In doing so, they documented significant (<span class="math inline">\(\sim\)</span>) changes in the frequencies of genetic variants across the gene—drift in action.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gompert_drift.png" class="img-fluid figure-img"></p>
+<figcaption><em>Figures 1 and 2 from Gompert et al.&nbsp;2021. Left: A map of population sampling localities, and a photo of Lycaeides idas (https://www.butterfliesandmoths.org/species/Plebejus-idas). Right: Changes in variant frequency in two subpopulations over time, plotted across chromosomes.</em></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="drift-and-heterozygosity" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="drift-and-heterozygosity"><span class="header-section-number">9.1</span> Drift and Heterozygosity</h2>
+<p>To understand how genetic drift impacts genetic diversity, it’s helpful to consider an extreme scenario we will return to several times: a population bottleneck, or sudden reduction in population size to a limited number of individuals. The most severe population bottleneck possible for sexually reproducing organisms is 2. Assuming they are diploid, the following table gives us the expected frequencies and heterozygosities of different allelic combinations. (<span class="math inline">\(H_e\)</span> is calculated as <span class="math inline">\(2pq\)</span> given <span class="math inline">\(f(A_1)\)</span> and <span class="math inline">\(f(A_2)\)</span> from the Allele combination column.)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Allele combination</th>
+<th style="text-align: left;">Frequency (<span class="math inline">\(f\)</span>)</th>
+<th style="text-align: left;">Heterozygosity (<span class="math inline">\(H_e\)</span>)</th>
+<th style="text-align: left;"><span class="math inline">\(f\)</span> x <span class="math inline">\(H_e\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">4 <span class="math inline">\(A_1\)</span>s</td>
+<td style="text-align: left;"><span class="math inline">\(p^4\)</span></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3 <span class="math inline">\(A_1\)</span>s; 1 <span class="math inline">\(A_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(4p^3q\)</span></td>
+<td style="text-align: left;">0.375</td>
+<td style="text-align: left;"><span class="math inline">\(1.5p^3q\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2 <span class="math inline">\(A_1\)</span>s; 2 <span class="math inline">\(A_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(6p^2q^2\)</span></td>
+<td style="text-align: left;">0.5</td>
+<td style="text-align: left;"><span class="math inline">\(3p^2q^2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1 <span class="math inline">\(A_1\)</span>s; 3 <span class="math inline">\(A_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(4pq^3\)</span></td>
+<td style="text-align: left;">0.375</td>
+<td style="text-align: left;"><span class="math inline">\(1.5pq^3\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4 <span class="math inline">\(A_2\)</span>s</td>
+<td style="text-align: left;"><span class="math inline">\(q^4\)</span></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(1.5pq\)</span>*</td>
+</tr>
+</tbody>
+</table>
+<p>*Derivation: <span class="math inline">\(\text{Total} = 1.5p^3q + 3p^2q^2 + 1.5pq^3 = 1.5pq(p^2 + 2pq + q^2) = 1.5pq(1) = 1.5pq\)</span></p>
+<p>Mean heterozygosity in the bottlenecked population (<span class="math inline">\(H_1\)</span>) will be a proportion of the heterozygosity in the original population (<span class="math inline">\(H_0\)</span>). In this case, <span class="math inline">\(\frac{H_1}{H_0}\)</span> will be <span class="math inline">\(\frac{1.5pq}{2pq}\)</span> = <span class="math inline">\(\frac{3}{4}\)</span> or <span class="math inline">\(1-\frac{1}{4}\)</span>. Since 2N = 4, <span class="math inline">\(\frac{H_1}{H_0} = 1 - \frac{1}{2N}\)</span>. Therefore, a single pair bottleneck will reduce <span class="math inline">\(H_0\)</span> by 25%; a bottleneck of 10 individuals will only reduce it by <span class="math inline">\(5%\)</span>. We will return to this idea from a different perspective in a later lecture.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="The Mauritius Kestrel Bottleneck">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Mauritius Kestrel Bottleneck
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mauritius Kestrel (<em>Falco punctatus</em>), the last surviving endemic raptor on the island of Mauritius, underwent a short-lived but severe population bottleneck due to forest loss and pesticide use, reaching a single known breeding pair in 1973. An intensive conservation breeding program halted and reversed the decline, leading to a current population of &gt;400 individuals. Richard Nichols and colleagues (<span class="citation" data-cites="nichols2001sustaining">Nichols, Bruford, and Groombridge (<a href="references.html#ref-nichols2001sustaining" role="doc-biblioref">2001</a>)</span>) used microsatellite data from contemporary tissue samples and historic museum specimens to describe changes in genetic diversity through time, showing that the restored population has significantly lower observed heterozygosity than either the ancestral (pre-bottleneck) population or mainland populations of other kestrel species.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/kestrel_paper.png" class="img-fluid figure-img"></p>
+<figcaption><em>Figures 1 and 2 from Nichols et al.&nbsp;2001. Left:</em> <span class="math inline">\(H_o\)</span> across microsatellite loci in extant Mauritius Kestrels, the ancestral population of Mauritius Kestrels, and other non-insular kestrel species. A photo of a banded Mauritius Kestrel is inset below (https://macaulaylibrary.org/asset/250861081). Right: Inferred distributional and population size changes in the species</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Genetic Drift Activity">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Genetic Drift Activity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CJ Battey wrote an app to simulate allele frequency change due to drift and selection: https://phytools.shinyapps.io/selection/</p>
+<p><img src="images/driftr.png" class="img-fluid"></p>
+<p>Open the app in your browser and work through the following questions.</p>
+<ol type="1">
+<li><p>Orient yourself. What are the axes? What variables can you change? What does the plot display when you click “Run Simulation”?</p></li>
+<li><p>Set “Starting allele frequency A” to 0.5 (instead of two values, as is default). Set all fitnesses to 1, the Migration Rate to 0, the Number of Populations to 10, and Number of Generations to 100. Make sure you are plotting “p” alone. Run simulations for population sizes of 10, 100, 1000, and 10,000. What pattern do you observe? What does it mean when a colored line hits the top of the graph? What does it mean when a colored line hits the bottom of the graph?</p></li>
+<li><p>Repeat the process in 2 but setting the fitness of one of the homozygotes to a value between 0.01 and 0.5. What do you observe?</p></li>
+<li><p>Develop a question to address with the driftR.</p></li>
+</ol>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-gompert2021genomic" class="csl-entry" role="listitem">
+Gompert, Zachariah, Amy Springer, Megan Brady, Samridhi Chaturvedi, and Lauren K Lucas. 2021. <span>“Genomic Time-Series Data Show That Gene Flow Maintains High Genetic Diversity Despite Substantial Genetic Drift in a Butterfly Species.”</span> <em>Molecular Ecology</em> 30 (20): 4991–5008.
+</div>
+<div id="ref-nichols2001sustaining" class="csl-entry" role="listitem">
+Nichols, Richard A, Michael W Bruford, and Jim J Groombridge. 2001. <span>“Sustaining Genetic Variation in a Small Population: Evidence from the Mauritius Kestrel.”</span> <em>Molecular Ecology</em> 10 (3): 593–602.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./more_selection.html" class="pagination-link" aria-label="Mutation, migration, and selection">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Mutation, migration, and selection</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ne.html" class="pagination-link" aria-label="Effective Population Size">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Effective Population Size</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

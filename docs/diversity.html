@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; How do we study genetic diversity? – Fundamentals of Population and Conservation Genetics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./hwe.html" rel="next">
+<link href="./intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diversity.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How do we study genetic diversity?</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of Population and Conservation Genetics</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A Brief History of Conservation Genetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diversity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How do we study genetic diversity?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hwe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hardy-Weinberg Principle (or equilibirum, or proportions…)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ld.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Linkage Disequilibrium</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Quantitative Genetics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Natural selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./more_selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Mutation, migration, and selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./drift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Genetic Drift</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Effective Population Size</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./coalescent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Coalescent</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inbreeding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Inbreeding and Inbreeding Depression</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fst.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Population Subdivision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./viability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genetic Viability</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./units.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Taxonomy, Systematics, and Management Units</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hybrids.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Hybridization</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#quantifying-genetic-diversity" id="toc-quantifying-genetic-diversity" class="nav-link active" data-scroll-target="#quantifying-genetic-diversity"><span class="header-section-number">3.1</span> Quantifying genetic diversity</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How do we study genetic diversity?</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled" title="Paper Reading Strategies">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Paper Reading Strategies
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Understanding both the intellectual history and contemporary practice of conservation genetics requires moving beyond textbooks to read the primary literature. In this class we’ll do so on a weekly basis, engaging with a selection of a dozen or so scientific articles in person and through written assignments. In general, the papers I’ve picked are not unduly technical, represent different types of research and scholarship in conservation genetics, and emphasize local species when possible. (There is a vertebrate bias; I apologize.)</p>
+<p><strong>The following questions are helpful for efficiently grasping scientific articles:</strong></p>
+<ul>
+<li>What type of paper is it? (review, perspective, empirical…)</li>
+<li>What is the main question or goal?</li>
+<li>How did the authors set out to answer that question?</li>
+<li>What did they find?</li>
+<li>How do they interpret their findings?</li>
+<li>Critique: strengths? limitations? stronger evidence?</li>
+<li>What does each figure say? Where and when was it published?</li>
+</ul>
+</div>
+</div>
+<p>Empirical population and conservation genetics requires assessing genetic variation, either directly (through DNA sequences) or indirectly (through the property of phenotypes that reveal underlying sequence variation). Though seemingly trivial—“genetics” is in the name of both fields, after all—this emphasis on molecular variation distinguishes our topic from other ways biodiversity is studied (e.g.&nbsp;morphometrics). Consider a scenario in which you have both DNA sequence data and data from a meristic (countable) trait in the same set of populations of three-spined stickleback (<em>Gasterosteus aculeatus</em>). The trait in question—the number of lateral plates on each individual—ranges from n=20 to n=30. You are interested in the evolutionary relationships among populations. At first pass, inferring a close relationship among fish in ponds where all stickleback have either 30, 27, 23, or 20 plates would seem to make sense. Yet the sequence data from the same individuals show that there are multiple genetic variants that can give rise to the exact same number of plates! For example, 30-plated fish in pond A have haplotype <span class="math inline">\(CTGA\)</span> at the plate-determining locus, while 30-plated fish in pond B have haplotype <span class="math inline">\(GTAA\)</span>. Given the vast number of variable sites in the genome, it is more probable that that the differences in sequence reflect the “true” relatedness (or relative evolutionary distance) than their identical number of plates. <strong>Though repeated mutations and other factors can mask the evolutionary signal in genetic data, it is nonetheless a much more faithful signal of ancestral relationships than phenotype.</strong></p>
+<p>Assessing genetic variation has only become possible at scale over the last 50 or so years. Indeed, one of the most impressive aspects of population genetic theory is how much of it was developed before Watson, Crick, and Franklin determined the structure of DNA in 1953! Early empirical work focused on simple traits that behaved in Mendelian ways, such as eye color in <em>Drosophila</em> fruit flies; complex traits such height gave rise to a separate body of theory called quantitative genetics, which circumvented the question of underlying variants by focusing on the properties of statistical distributions. (More on this later in the course.) Beginning in the 1960s, <em>protein electrophoresis</em>—a method in which sequence variation in proteins is revealed by their different electrical charges in an agarose gel medium—allowed scientists to directly quantify genetic diversity in a wide range of organisms. Particular proteins—often polymorphic enzymes known as allozymes—became known as <em>genetic markers</em>, as they “marked” differences in underlying genes. The term is still widely applied to any method that characterizes alleles by means other than direct sequencing.</p>
+<p>Protein electrophoresis confirmed many predictions of population genetic theory in natural populations. Yet it also brought surprises. For example, Hubby and Lewontin (<span class="citation" data-cites="hubby1966molecular">Hubby and Lewontin (<a href="references.html#ref-hubby1966molecular" role="doc-biblioref">1966</a>)</span>, <span class="citation" data-cites="lewontin1966molecular">Richard C. Lewontin and Hubby (<a href="references.html#ref-lewontin1966molecular" role="doc-biblioref">1966</a>)</span>, <span class="citation" data-cites="charlesworth2016hubby">Charlesworth et al. (<a href="references.html#ref-charlesworth2016hubby" role="doc-biblioref">2016</a>)</span>) showed that there was significantly more allelic variation in <em>Drosophila</em> than expected, with differences in the electrical charge of proteins that were assumed to be “monomorphic” (i.e., had the same form). Six years later, Lewontin (<span class="citation" data-cites="Lewontin1972Apportionment">Richard C. Lewontin (<a href="references.html#ref-Lewontin1972Apportionment" role="doc-biblioref">1972</a>)</span>,) showed that there is far more allelic variation within than across ethnic groups, refuting widespread ideas about the biological reality of races.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/allozymes.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption><em>A diagram of protein electrophoresis from <span class="citation" data-cites="inbook">Fetzner Jr and Crandall (<a href="references.html#ref-inbook" role="doc-biblioref">2001</a>)</span>.</em></figcaption>
+</figure>
+</div>
+<p>Despite its usefulness, protein electrophoresis only revealed variation at functional (i.e., protein coding) sites. The subsequent two decades lead to a suite of new genetic markers, including restriction fragment length polymorphisms (RFLPs; variants in restriction enzymes that would result in different patterns of DNA fragmentation on a gel), single strand conformation polymorphisms (SSCPs; variants impact the shape of a single strand of DNA, affecting its mobility in a gel), and minisatellites and microsatellites (methods that detect alleles as repetitive DNA motifs, again indicated through gel electrophoresis). The polymerase chain reaction—a method of creating millions of copies of a DNA sequence of interest with the help of a heat-tolerant enzyme discovered in thermophilic bacteria from Yellowstone—further enhanced our ability to assay variation across the genome. It became particularly important to the first widely adopted approach to directly “sequencing” (determining the specific composition and order of nucleotides) DNA. Known as Sanger sequencing, this method is still used today, and involves creating a synthetic DNA strand of color-dyed bases to match the sample of interest; colored bases are then read by a lazer in a capillary gel.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sscp.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption><em>The basis of single-stand conformation polymorphisms (<span class="citation" data-cites="gasser2006single">Gasser et al. (<a href="references.html#ref-gasser2006single" role="doc-biblioref">2006</a>)</span>).</em></figcaption>
+</figure>
+</div>
+<p>After a moonshot endeavor to sequence the entire human genome in the early 2000s, <em>genomics</em>—a term that means the study of the genome-wide genetic variation—began to be applied to nonmodel organisms. Initially, this was largely done with so-called “reduced representation approaches” such as restriction-site associated DNA sequencing (RADseq; a relative of RFLPs, where restriction enzymes randomly fragment the genome and sections of a certain size are amplified and sequenced) and target capture (where previously identified regions of the genome are joined to synthetic probes to be amplified and sequenced). Reduced representation approaches leveraged high-throughput, short-read sequencing technology on platforms such as Illumina; this method works by joining millions of short DNA sequences to a platform known as a flow cell, where they are amplified and tagged with dyee (shown in a nice video <a href="https://youtu.be/fCd6B5HRaZ8">here</a>). Inevitably, Illumina and similar technologies were used to sequence the entire genome of individuals. Confusingly, such whole-genome sequencing (WGS) is sometimes known as whole-genome resequencing, with the implication that there is a “first” genome for any given species. Such “reference” genomes often involve more intensive “sequencing effort” (more “reads”, or sequences generated, for each stretch of DNA). These days, they are generated with long-read sequencing technology, a method that attempts to sequence chromsome-scale stretches of the genome in a single go.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/illumina.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption><em>Illumina sequencing technology, <a href="https://en.wikipedia.org/wiki/Illumina_dye_sequencing">via Wikipedia</a>.</em></figcaption>
+</figure>
+</div>
+<p>Everything from protein electrophoresis to WGS requires a source of genetic material: typically blood, muscle, heart, liver, scat, environmental traces. Obtaining this material can either be destructive (i.e., killing the animal) or nondestructive (a blood sample). A further distinction is invasive (catching the animal and bleeding it) or noninvasive (obtaining genetic material from scat or the environment). In diploid Eurkaryotes, most cells have 2 copies each of the nuclear genome and 100-1000 copies of the mitochondrial genome; chloroplast genomes are found in photosynthetic organelles called plastids (3-275+ copies each). This variation in copy number is no longer a determinant of what approaches are feasible, but is worth highlighting as a reminder that all empirical population genetics involves tangible biological structures.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Probability Theory">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Probability Theory
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A crucial assumption of population genetic theory is that alleles segregate (i.e., are passed on in gametes) by chance. As a consequence, population genetics relies heavily on probability theory. It is therefore in our interest to brush up the five Probability Rules, all of which will be used to solve problems this semester:</p>
+<ol type="1">
+<li><p><strong>Possible values</strong> range from 0 (an impossible event) to 1 (a certain event).</p></li>
+<li><p><strong>The sum of probabilities for all possible outcomes is 1.</strong></p></li>
+<li><p><strong>Addition rule:</strong> the probability that at least one of two events occurs:</p>
+<ul>
+<li><strong>Mutually exclusive:</strong><br>
+<span class="math inline">\(P(\text{A or B}) = P(\text{A}) + P(\text{B})\)</span></li>
+<li><strong>Not mutually exclusive:</strong><br>
+<span class="math inline">\(P(\text{A or B}) = P(\text{A}) + P(\text{B}) - P(\text{A and B})\)</span></li>
+</ul></li>
+<li><p><strong>Multiplication rule:</strong> the probability two events occur together:</p>
+<ul>
+<li><strong>Independent:</strong><br>
+<span class="math inline">\(P(\text{A and B}) = P(\text{A}) \times P(\text{B})\)</span></li>
+<li><strong>Nonindependent:</strong><br>
+<span class="math inline">\(P(\text{A and B}) = P(\text{A}) \times P(\text{B} \mid \text{A})\)</span></li>
+</ul></li>
+<li><p><strong>Conditional probability:</strong> the probability an event happens given another event occurs:</p>
+<ul>
+<li><p><strong>Independent:</strong><br>
+<span class="math inline">\(P(\text{A} \mid \text{B}) = P(\text{A})\)</span><br>
+<em>Example:</em> If two coins are flipped, knowing one coin is tails gives no information about the other; <span class="math inline">\(P(\text{heads}) = 0.5\)</span>.</p></li>
+<li><p><strong>Nonindependent:</strong><br>
+<span class="math inline">\(P(\text{A} \mid \text{B}) = \dfrac{P(\text{A and B})}{P(\text{B})}\)</span></p>
+<p><em>Example:</em> A bag has 6 red, 3 blue, and 1 green marble.<br>
+<span class="math inline">\(P(\text{A and B}) = \frac{6}{10} = 0.6\)</span>,<br>
+<span class="math inline">\(P(\text{B}) = \frac{9}{10} = 0.9\)</span>,<br>
+so <span class="math inline">\(P(\text{A} \mid \text{B}) = 0.6 / 0.9 = 0.66\)</span>.</p></li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Genetic polymorphisms in *Aplonis* starlings">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Genetic polymorphisms in <em>Aplonis</em> starlings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In an early application of protein electrophoresis to wild birds, Kendall Corbin, Charles Sibley, and Andrew Ferguson <span class="citation" data-cites="corbin1974genetic">(<a href="references.html#ref-corbin1974genetic" role="doc-biblioref">Corbin et al. 1974</a>)</span> assessed the extent of protein polymorphism in two species of starling in the genus <em>Aplonis</em>. The species, found on New Guinea and its offshore colonies, differed in their basic biology: Metallic Starling <em>Aplonis metallica</em> nests in large colonies and is tolerant of human disturbance, while Singing Starling <em>Aplonis cantoroides</em> is a solitary rainforest dweller.</p>
+<p>New Guinea is geographically complex, and the authors hypothesized that its topography would restrict gene flow and lead to unique, geographically localized genetic variants. Isolating variants at the lactase dehydrogenase-H (LDH-H) and esterase-1 loci, the authors found contrasting patterns. LDH-H showed variation but similar allele frequencies across <em>A. metallica</em>’s sampled range, while esterase-1 showed geographically correlated variation in allele frequencies (Figure 1). In <em>A. cantoroides</em>, LDH-H was essentially monomorphic, while esterase-1 showed some limited variation.</p>
+<p>Allele frequencies were not significantly different from expectations under Hardy–Weinberg Equilibrium, suggesting there was not a strong influence of mutation, migration, or natural selection. The authors compare their findings to data from other birds, finding the reported polymorphism lower than captive populations but comparable to wild species.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/corbin.png" class="img-fluid figure-img"></p>
+<figcaption><em>Figure 1. Protein polymorphism in</em> <em>A. metallica</em></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="quantifying-genetic-diversity" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="quantifying-genetic-diversity"><span class="header-section-number">3.1</span> Quantifying genetic diversity</h2>
+<p>In the previous class we surveyed a range of methods for assaying genetic variation dating from the 1970s to the present day. Though technologies have varied across time, both genetic marker-based approaches (such as microsatellites or protein electrophorsis) and direct DNA sequencing (whether WGS or Sanger sequencing) result in a collection of individual genotypes from a sample or set of samples. The unique genotypes present in these samples constitute <em>alleles</em>, or distinct genetic variants at a particular locus.</p>
+<p>Quantifying genetic diversity involves the use of <em>summary statistics</em> to capture the various ways</p>
+<p><strong>Proportion of polymorphic loci:</strong><br>
+<span class="math display">\[
+P = \frac{p}{n} = \frac{\text{no. polymorphic loci}}{\text{no. loci}}
+\]</span></p>
+<p><strong>Average heterozygosity:</strong><br>
+<span class="math display">\[
+H = \frac{1}{n}\sum_{i=1}^nH_i
+\]</span> where <span class="math inline">\(H_i\)</span> is the average heterozygosity (=proportion of individuals that are heterozygous) at locus <span class="math inline">\(i\)</span> and <span class="math inline">\(n\)</span> is the total number of loci. (This is just a fancy way to write an arithmetic mean.)</p>
+<p><strong>Allelic diversity:</strong> <span class="math display">\[
+A = \frac{1}{n}\sum_{i=1}^nA_i
+\]</span> where <span class="math inline">\(A_i\)</span> is the number of alleles at locus <span class="math inline">\(i\)</span> and <span class="math inline">\(n\)</span> is the total number of loci.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-charlesworth2016hubby" class="csl-entry" role="listitem">
+Charlesworth, Brian, Deborah Charlesworth, Jerry A Coyne, and Charles H Langley. 2016. <span>“Hubby and Lewontin on Protein Variation in Natural Populations: When Molecular Genetics Came to the Rescue of Population Genetics.”</span> <em>Genetics</em> 203 (4): 1497–1503.
+</div>
+<div id="ref-corbin1974genetic" class="csl-entry" role="listitem">
+Corbin, Kendall W, Charles G Sibley, Andrew Ferguson, Allan C Wilson, Alan H Brush, and Jon E Ahlquist. 1974. <span>“Genetic Polymorphism in New Guinea Starlings of the Genus Aplonis.”</span> <em>The Condor</em> 76 (3): 307–18.
+</div>
+<div id="ref-inbook" class="csl-entry" role="listitem">
+Fetzner Jr, James, and Keith Crandall. 2001. <span>“Genetic Variation.”</span> In <em>Nature</em>, 238:291–326. <a href="https://doi.org/10.1038/238113b0">https://doi.org/10.1038/238113b0</a>.
+</div>
+<div id="ref-gasser2006single" class="csl-entry" role="listitem">
+Gasser, Robin B, Min Hu, Neil B Chilton, Bronwyn E Campbell, Aaron J Jex, Domenico Otranto, Claudia Cafarchia, Ian Beveridge, and Xingquan Zhu. 2006. <span>“Single-Strand Conformation Polymorphism (SSCP) for the Analysis of Genetic Variation.”</span> <em>Nature Protocols</em> 1 (6): 3121–28.
+</div>
+<div id="ref-hubby1966molecular" class="csl-entry" role="listitem">
+Hubby, John L, and Richard C Lewontin. 1966. <span>“A Molecular Approach to the Study of Genic Heterozygosity in Natural Populations. I. The Number of Alleles at Different Loci in Drosophila Pseudoobscura.”</span> <em>Genetics</em> 54 (2): 577.
+</div>
+<div id="ref-Lewontin1972Apportionment" class="csl-entry" role="listitem">
+Lewontin, Richard C. 1972. <span>“The Apportionment of Human Diversity.”</span> In <em>Evolutionary Biology</em>, edited by Theodosius Dobzhansky, Max K. Hecht, and William C. Steere, 6:381–98. Evolutionary Biology. Springer, New York, NY. <a href="https://doi.org/10.1007/978-1-4684-9063-3_14">https://doi.org/10.1007/978-1-4684-9063-3_14</a>.
+</div>
+<div id="ref-lewontin1966molecular" class="csl-entry" role="listitem">
+Lewontin, Richard C, and Jack L Hubby. 1966. <span>“A Molecular Approach to the Study of Genic Heterozygosity in Natural Populations. II. Amount of Variation and Degree of Heterozygosity in Natural Populations of Drosophila Pseudoobscura.”</span> <em>Genetics</em> 54 (2): 595.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="A Brief History of Conservation Genetics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A Brief History of Conservation Genetics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./hwe.html" class="pagination-link" aria-label="Hardy-Weinberg Principle (or equilibirum, or proportions...)">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hardy-Weinberg Principle (or equilibirum, or proportions…)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
