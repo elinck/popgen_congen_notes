@@ -1,0 +1,36 @@
+project:
+  type: book
+
+book:
+  title: "Fundamentals of Population and Conservation Genetics"
+  author: "Ethan Linck"
+  date: "12/12/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - diversity.qmd
+    - hwe.qmd
+    - ld.qmd
+    - quant.qmd 
+    - selection.qmd
+    - more_selection.qmd
+    - drift.qmd
+    - ne.qmd 
+    - coalescent.qmd
+    - inbreeding.qmd
+    - fst.qmd
+    - viability.qmd  
+    - units.qmd  
+    - hybrids.qmd  
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

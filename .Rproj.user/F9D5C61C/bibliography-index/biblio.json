@@ -1,0 +1,1328 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Corbin",
+                    "given": "Kendall W"
+                },
+                {
+                    "family": "Sibley",
+                    "given": "Charles G"
+                },
+                {
+                    "family": "Ferguson",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Wilson",
+                    "given": "Allan C"
+                },
+                {
+                    "family": "Brush",
+                    "given": "Alan H"
+                },
+                {
+                    "family": "Ahlquist",
+                    "given": "Jon E"
+                }
+            ],
+            "container-title": "The Condor",
+            "id": "corbin1974genetic",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1974
+                    ]
+                ]
+            },
+            "page": "307-318",
+            "publisher": "JSTOR",
+            "title": "Genetic polymorphism in new guinea starlings of the genus aplonis",
+            "type": "article-journal",
+            "volume": "76"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hagenblad",
+                    "given": "Jenny"
+                },
+                {
+                    "family": "Olsson",
+                    "given": "Maria"
+                },
+                {
+                    "family": "Parker",
+                    "given": "Heidi G"
+                },
+                {
+                    "family": "Ostrander",
+                    "given": "Elaine A"
+                },
+                {
+                    "family": "Ellegren",
+                    "given": "Hans"
+                }
+            ],
+            "container-title": "Molecular ecology",
+            "id": "hagenblad2009population",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "1341-1351",
+            "publisher": "Wiley Online Library",
+            "title": "Population genomics of the inbred scandinavian wolf",
+            "type": "article-journal",
+            "volume": "18"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pape Moller",
+                    "given": "Anders"
+                }
+            ],
+            "container-title": "Proceedings of the Royal Society of London. Series B: Biological Sciences",
+            "id": "pape2001heritability",
+            "issue": "1463",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "203-206",
+            "publisher": "The Royal Society",
+            "title": "Heritability of arrival date in a migratory bird",
+            "type": "article-journal",
+            "volume": "268"
+        },
+        {
+            "author": [
+                {
+                    "family": "Barrett",
+                    "given": "Rowan DH"
+                },
+                {
+                    "family": "Rogers",
+                    "given": "Sean M"
+                },
+                {
+                    "family": "Schluter",
+                    "given": "Dolph"
+                }
+            ],
+            "container-title": "Science",
+            "id": "barrett2008natural",
+            "issue": "5899",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "255-257",
+            "publisher": "American Association for the Advancement of Science",
+            "title": "Natural selection on a major armor gene in threespine stickleback",
+            "type": "article-journal",
+            "volume": "322"
+        },
+        {
+            "author": [
+                {
+                    "family": "Nachman",
+                    "given": "Michael W"
+                },
+                {
+                    "family": "Hoekstra",
+                    "given": "Hopi E"
+                },
+                {
+                    "family": "D’Agostino",
+                    "given": "Susan L"
+                }
+            ],
+            "container-title": "Proceedings of the National Academy of Sciences",
+            "id": "nachman2003genetic",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "5268-5273",
+            "publisher": "The National Academy of Sciences",
+            "title": "The genetic basis of adaptive melanism in pocket mice",
+            "type": "article-journal",
+            "volume": "100"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cheviron",
+                    "given": "Zachary A"
+                },
+                {
+                    "family": "Brumfield",
+                    "given": "Robb T"
+                }
+            ],
+            "container-title": "Evolution",
+            "id": "cheviron2009migration",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "1593-1605",
+            "publisher": "Blackwell Publishing Inc Malden, USA",
+            "title": "Migration-selection balance and local adaptation of mitochondrial haplotypes in rufous-collared sparrows (zonotrichia capensis) along an elevational gradient",
+            "type": "article-journal",
+            "volume": "63"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gompert",
+                    "given": "Zachariah"
+                },
+                {
+                    "family": "Springer",
+                    "given": "Amy"
+                },
+                {
+                    "family": "Brady",
+                    "given": "Megan"
+                },
+                {
+                    "family": "Chaturvedi",
+                    "given": "Samridhi"
+                },
+                {
+                    "family": "Lucas",
+                    "given": "Lauren K"
+                }
+            ],
+            "container-title": "Molecular Ecology",
+            "id": "gompert2021genomic",
+            "issue": "20",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "page": "4991-5008",
+            "publisher": "Wiley Online Library",
+            "title": "Genomic time-series data show that gene flow maintains high genetic diversity despite substantial genetic drift in a butterfly species",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "author": [
+                {
+                    "family": "Nichols",
+                    "given": "Richard A"
+                },
+                {
+                    "family": "Bruford",
+                    "given": "Michael W"
+                },
+                {
+                    "family": "Groombridge",
+                    "given": "Jim J"
+                }
+            ],
+            "container-title": "Molecular Ecology",
+            "id": "nichols2001sustaining",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "593-602",
+            "publisher": "Wiley Online Library",
+            "title": "Sustaining genetic variation in a small population: Evidence from the mauritius kestrel",
+            "title-short": "Sustaining genetic variation in a small population",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "author": [
+                {
+                    "family": "Palstra",
+                    "given": "Friso P"
+                },
+                {
+                    "family": "Ruzzante",
+                    "given": "Daniel E"
+                }
+            ],
+            "container-title": "Molecular ecology",
+            "id": "palstra2008genetic",
+            "issue": "15",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "3428-3447",
+            "publisher": "Wiley Online Library",
+            "title": "Genetic estimates of contemporary effective population size: What can they tell us about the importance of genetic stochasticity for wild population persistence?",
+            "title-short": "Genetic estimates of contemporary effective population size",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "author": [
+                {
+                    "family": "Jeon",
+                    "given": "Jong Yoon"
+                },
+                {
+                    "family": "Black",
+                    "given": "Andrew N"
+                },
+                {
+                    "family": "Heenkenda",
+                    "given": "Erangi J"
+                },
+                {
+                    "family": "Mularo",
+                    "given": "Andrew J"
+                },
+                {
+                    "family": "Lamka",
+                    "given": "Gina F"
+                },
+                {
+                    "family": "Janjua",
+                    "given": "Safia"
+                },
+                {
+                    "family": "Brüniche-Olsen",
+                    "given": "Anna"
+                },
+                {
+                    "family": "Bickham",
+                    "given": "John W"
+                },
+                {
+                    "family": "Willoughby",
+                    "given": "Janna R"
+                },
+                {
+                    "family": "DeWoody",
+                    "given": "J Andrew"
+                }
+            ],
+            "container-title": "Evolutionary Applications",
+            "id": "jeon2024genomic",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "page": "e70000",
+            "publisher": "Wiley Online Library",
+            "title": "Genomic diversity as a key conservation criterion: Proof-of-concept from mammalian whole-genome resequencing data",
+            "title-short": "Genomic diversity as a key conservation criterion",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "author": [
+                {
+                    "family": "Norén",
+                    "given": "Karin"
+                },
+                {
+                    "family": "Godoy",
+                    "given": "Erika"
+                },
+                {
+                    "family": "Dalén",
+                    "given": "Love"
+                },
+                {
+                    "family": "Meijer",
+                    "given": "Tomas"
+                },
+                {
+                    "family": "Angerbjörn",
+                    "given": "Anders"
+                }
+            ],
+            "container-title": "Molecular ecology",
+            "id": "noren2016inbreeding",
+            "issue": "14",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "3309-3318",
+            "publisher": "Wiley Online Library",
+            "title": "Inbreeding depression in a critically endangered carnivore",
+            "type": "article-journal",
+            "volume": "25"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fitzpatrick",
+                    "given": "John L"
+                },
+                {
+                    "family": "Evans",
+                    "given": "Jonathan P"
+                }
+            ],
+            "container-title": "Biology letters",
+            "id": "fitzpatrick2009reduced",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "320-323",
+            "publisher": "The Royal Society London",
+            "title": "Reduced heterozygosity impairs sperm quality in endangered mammals",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ægisdóttir",
+                    "given": "Hafdı́s Hanna"
+                },
+                {
+                    "family": "Kuss",
+                    "given": "Patrick"
+                },
+                {
+                    "family": "Stöcklin",
+                    "given": "Jürg"
+                }
+            ],
+            "container-title": "Annals of Botany",
+            "id": "aegisdottir2009isolated",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "1313-1322",
+            "publisher": "Oxford University Press",
+            "title": "Isolated populations of a rare alpine plant show high genetic diversity and considerable population differentiation",
+            "type": "article-journal",
+            "volume": "104"
+        },
+        {
+            "author": [
+                {
+                    "family": "Clarke",
+                    "given": "Shannon H"
+                },
+                {
+                    "family": "Lawrence",
+                    "given": "Elizabeth R"
+                },
+                {
+                    "family": "Matte",
+                    "given": "Jean-Michel"
+                },
+                {
+                    "family": "Gallagher",
+                    "given": "Brian K"
+                },
+                {
+                    "family": "Salisbury",
+                    "given": "Sarah J"
+                },
+                {
+                    "family": "Michaelides",
+                    "given": "Sozos N"
+                },
+                {
+                    "family": "Koumrouyan",
+                    "given": "Ramela"
+                },
+                {
+                    "family": "Ruzzante",
+                    "given": "Daniel E"
+                },
+                {
+                    "family": "Grant",
+                    "given": "James WA"
+                },
+                {
+                    "family": "Fraser",
+                    "given": "Dylan J"
+                }
+            ],
+            "container-title": "Molecular Ecology",
+            "id": "clarke2024global",
+            "issue": "11",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "page": "e17353",
+            "publisher": "Wiley Online Library",
+            "title": "Global assessment of effective population sizes: Consistent taxonomic differences in meeting the 50/500 rule",
+            "title-short": "Global assessment of effective population sizes",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mayden",
+                    "given": "Richard L"
+                }
+            ],
+            "id": "mayden1997hierarchy",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "title": "A hierarchy of species concepts: The denouement in the saga of the species problem",
+            "title-short": "A hierarchy of species concepts",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Moritz",
+                    "given": "Craig"
+                }
+            ],
+            "container-title": "Trends in ecology & evolution",
+            "id": "moritz1994defining",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "page": "373-375",
+            "publisher": "Elsevier",
+            "title": "Defining “evolutionarily significant units” for conservation",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "family": "Funk",
+                    "given": "W Chris"
+                },
+                {
+                    "family": "McKay",
+                    "given": "John K"
+                },
+                {
+                    "family": "Hohenlohe",
+                    "given": "Paul A"
+                },
+                {
+                    "family": "Allendorf",
+                    "given": "Fred W"
+                }
+            ],
+            "container-title": "Trends in ecology & evolution",
+            "id": "funk2012harnessing",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "489-496",
+            "publisher": "Elsevier",
+            "title": "Harnessing genomics for delineating conservation units",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Huff",
+                    "given": "David D"
+                },
+                {
+                    "family": "Miller",
+                    "given": "Loren M"
+                },
+                {
+                    "family": "Chizinski",
+                    "given": "Christopher J"
+                },
+                {
+                    "family": "Vondracek",
+                    "given": "Bruce"
+                }
+            ],
+            "container-title": "Molecular Ecology",
+            "id": "huff2011mixed",
+            "issue": "20",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "4246-4258",
+            "publisher": "Wiley Online Library",
+            "title": "Mixed-source reintroductions lead to outbreeding depression in second-generation descendents of a native north american fish",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "author": [
+                {
+                    "family": "McCormack",
+                    "given": "John E"
+                },
+                {
+                    "family": "Maley",
+                    "given": "James M"
+                }
+            ],
+            "container-title": "The Auk: Ornithological Advances",
+            "id": "mccormack2015interpreting",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "380-388",
+            "publisher": "Oxford University Press",
+            "title": "Interpreting negative results with taxonomic and conservation implications: Another look at the distinctness of coastal california gnatcatchers",
+            "title-short": "Interpreting negative results with taxonomic and conservation implications",
+            "type": "article-journal",
+            "volume": "132"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zink",
+                    "given": "Robert M"
+                },
+                {
+                    "family": "Groth",
+                    "given": "Jeffrey G"
+                },
+                {
+                    "family": "Vázquez-Miranda",
+                    "given": "Hernan"
+                },
+                {
+                    "family": "Barrowclough",
+                    "given": "George F"
+                }
+            ],
+            "container-title": "The Auk",
+            "id": "zink2013phylogeography",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "449-458",
+            "publisher": "Oxford University Press",
+            "title": "Phylogeography of the california gnatcatcher (polioptila californica) using multilocus DNA sequences and ecological niche modeling: Implications for conservation",
+            "title-short": "Phylogeography of the california gnatcatcher (polioptila californica) using multilocus DNA sequences and ecological niche modeling",
+            "type": "article-journal",
+            "volume": "130"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zink",
+                    "given": "Robert M"
+                },
+                {
+                    "family": "Groth",
+                    "given": "Jeffrey G"
+                },
+                {
+                    "family": "Vázquez-Miranda",
+                    "given": "Hernan"
+                },
+                {
+                    "family": "Barrowclough",
+                    "given": "George F"
+                }
+            ],
+            "container-title": "The Auk",
+            "id": "zink2016geographic",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "59-68",
+            "publisher": "Oxford Academic",
+            "title": "Geographic variation, null hypotheses, and subspecies limits in the california gnatcatcher: A response to McCormack and maley",
+            "title-short": "Geographic variation, null hypotheses, and subspecies limits in the california gnatcatcher",
+            "type": "article-journal",
+            "volume": "133"
+        },
+        {
+            "author": [
+                {
+                    "family": "Harrison",
+                    "given": "Richard G"
+                }
+            ],
+            "container-title": "Oxf Surv Evol Biol",
+            "id": "harrison1990hybrid",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "page": "69-128",
+            "title": "Hybrid zones: Windows on evolutionary process",
+            "title-short": "Hybrid zones",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "author": [
+                {
+                    "family": "Aguillon",
+                    "given": "Stepfanie M"
+                },
+                {
+                    "family": "Dodge",
+                    "given": "Tristram O"
+                },
+                {
+                    "family": "Preising",
+                    "given": "Gabriel A"
+                },
+                {
+                    "family": "Schumer",
+                    "given": "Molly"
+                }
+            ],
+            "container-title": "Current Biology",
+            "id": "aguillon2022introgression",
+            "issue": "16",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "R865-R868",
+            "publisher": "Elsevier",
+            "title": "Introgression",
+            "type": "article-journal",
+            "volume": "32"
+        },
+        {
+            "author": [
+                {
+                    "family": "Waples",
+                    "given": "Robin S"
+                },
+                {
+                    "family": "Kays",
+                    "given": "Roland"
+                },
+                {
+                    "family": "Fredrickson",
+                    "given": "Richard J"
+                },
+                {
+                    "family": "Pacifici",
+                    "given": "Krishna"
+                },
+                {
+                    "family": "Mills",
+                    "given": "L Scott"
+                }
+            ],
+            "container-title": "Journal of Heredity",
+            "id": "waples2018red",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "585-597",
+            "publisher": "Oxford University Press US",
+            "title": "Is the red wolf a listable unit under the US endangered species act?",
+            "type": "article-journal",
+            "volume": "109"
+        },
+        {
+            "author": [
+                {
+                    "family": "Irwin",
+                    "given": "Darren E"
+                }
+            ],
+            "container-title": "The American Naturalist",
+            "id": "irwin2020assortative",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "E150-E167",
+            "publisher": "The University of Chicago Press Chicago, IL",
+            "title": "Assortative mating in hybrid zones is remarkably ineffective in promoting speciation",
+            "type": "article-journal",
+            "volume": "195"
+        },
+        {
+            "author": [
+                {
+                    "family": "Todesco",
+                    "given": "Marco"
+                },
+                {
+                    "family": "Pascual",
+                    "given": "Mariana A"
+                },
+                {
+                    "family": "Owens",
+                    "given": "Gregory L"
+                },
+                {
+                    "family": "Ostevik",
+                    "given": "Katherine L"
+                },
+                {
+                    "family": "Moyers",
+                    "given": "Brook T"
+                },
+                {
+                    "family": "Hübner",
+                    "given": "Sariel"
+                },
+                {
+                    "family": "Heredia",
+                    "given": "Sylvia M"
+                },
+                {
+                    "family": "Hahn",
+                    "given": "Min A"
+                },
+                {
+                    "family": "Caseys",
+                    "given": "Celine"
+                },
+                {
+                    "family": "Bock",
+                    "given": "Dan G"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "container-title": "Evolutionary applications",
+            "id": "todesco2016hybridization",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "892-908",
+            "publisher": "Wiley Online Library",
+            "title": "Hybridization and extinction",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "family": "Frankham",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Ballou",
+                    "given": "JD"
+                },
+                {
+                    "family": "Briscoe",
+                    "given": "DA"
+                }
+            ],
+            "id": "frankham2018conservation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Conservation genetics.",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1093/oso/9780198856566.001.0001",
+            "ISBN": "9780198856566",
+            "author": [
+                {
+                    "family": "Allendorf",
+                    "given": "Fred W."
+                },
+                {
+                    "family": "Funk",
+                    "given": "W. Chris"
+                },
+                {
+                    "family": "Aitken",
+                    "given": "Sally N."
+                },
+                {
+                    "family": "Byrne",
+                    "given": "Margaret"
+                },
+                {
+                    "family": "Luikart",
+                    "given": "Gordon"
+                }
+            ],
+            "edition": "3",
+            "id": "allendorf2022conservation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "publisher": "Oxford University Press",
+            "publisher-place": "Oxford, UK",
+            "title": "Conservation and the genomics of populations",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Felsenstein",
+                    "given": "Joseph"
+                }
+            ],
+            "container-title": "University of Washington, Seattle",
+            "id": "felsenstein2005theoretical",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "title": "Theoretical evolutionary genetics joseph felsenstein",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Coop",
+                    "given": "Graham"
+                }
+            ],
+            "container-title": "The Coop Lab. Population and Evolutionary Genetics. UC Davis",
+            "id": "coop2013notes",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "title": "Notes on population genetics",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1038/238113b0",
+            "ISBN": "0-632-05431-X",
+            "author": [
+                {
+                    "family": "Fetzner Jr",
+                    "given": "James"
+                },
+                {
+                    "family": "Crandall",
+                    "given": "Keith"
+                }
+            ],
+            "container-title": "Nature",
+            "id": "inbook",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        12
+                    ]
+                ]
+            },
+            "page": "291-326",
+            "title": "Genetic variation",
+            "type": "chapter",
+            "volume": "238"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gasser",
+                    "given": "Robin B"
+                },
+                {
+                    "family": "Hu",
+                    "given": "Min"
+                },
+                {
+                    "family": "Chilton",
+                    "given": "Neil B"
+                },
+                {
+                    "family": "Campbell",
+                    "given": "Bronwyn E"
+                },
+                {
+                    "family": "Jex",
+                    "given": "Aaron J"
+                },
+                {
+                    "family": "Otranto",
+                    "given": "Domenico"
+                },
+                {
+                    "family": "Cafarchia",
+                    "given": "Claudia"
+                },
+                {
+                    "family": "Beveridge",
+                    "given": "Ian"
+                },
+                {
+                    "family": "Zhu",
+                    "given": "Xingquan"
+                }
+            ],
+            "container-title": "Nature protocols",
+            "id": "gasser2006single",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "3121-3128",
+            "publisher": "Nature Publishing Group UK London",
+            "title": "Single-strand conformation polymorphism (SSCP) for the analysis of genetic variation",
+            "type": "article-journal",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ashley",
+                    "given": "Mary V"
+                },
+                {
+                    "family": "Berger-Wolf",
+                    "given": "Tanya Y"
+                },
+                {
+                    "family": "Caballero",
+                    "given": "Isabel C"
+                },
+                {
+                    "family": "Chaovalitwongse",
+                    "given": "Wanpracha"
+                },
+                {
+                    "family": "DasGupta",
+                    "given": "Bhaskar"
+                },
+                {
+                    "family": "Sheikh",
+                    "given": "Saad I"
+                }
+            ],
+            "container-title": "Computational Biology: New Research. Nova Science Publishers, Hauppauge",
+            "id": "ashley2008full",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "231-258",
+            "title": "Full sibling reconstruction in wild populations from microsatellite genetic markers",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ashley",
+                    "given": "Mary V"
+                },
+                {
+                    "family": "Berger-Wolf",
+                    "given": "Tanya Y"
+                },
+                {
+                    "family": "Caballero",
+                    "given": "Isabel C"
+                },
+                {
+                    "family": "Chaovalitwongse",
+                    "given": "Wanpracha"
+                },
+                {
+                    "family": "DasGupta",
+                    "given": "Bhaskar"
+                },
+                {
+                    "family": "Sheikh",
+                    "given": "Saad I"
+                }
+            ],
+            "container-title": "Computational Biology: New Research. Nova Science Publishers, Hauppauge",
+            "id": "ashley2008full",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "231-258",
+            "title": "Full sibling reconstruction in wild populations from microsatellite genetic markers",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hubby",
+                    "given": "John L"
+                },
+                {
+                    "family": "Lewontin",
+                    "given": "Richard C"
+                }
+            ],
+            "container-title": "Genetics",
+            "id": "hubby1966molecular",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1966
+                    ]
+                ]
+            },
+            "page": "577",
+            "title": "A molecular approach to the study of genic heterozygosity in natural populations. I. The number of alleles at different loci in drosophila pseudoobscura",
+            "type": "article-journal",
+            "volume": "54"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lewontin",
+                    "given": "Richard C"
+                },
+                {
+                    "family": "Hubby",
+                    "given": "Jack L"
+                }
+            ],
+            "container-title": "Genetics",
+            "id": "lewontin1966molecular",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1966
+                    ]
+                ]
+            },
+            "page": "595",
+            "title": "A molecular approach to the study of genic heterozygosity in natural populations. II. Amount of variation and degree of heterozygosity in natural populations of drosophila pseudoobscura",
+            "type": "article-journal",
+            "volume": "54"
+        },
+        {
+            "author": [
+                {
+                    "family": "Charlesworth",
+                    "given": "Brian"
+                },
+                {
+                    "family": "Charlesworth",
+                    "given": "Deborah"
+                },
+                {
+                    "family": "Coyne",
+                    "given": "Jerry A"
+                },
+                {
+                    "family": "Langley",
+                    "given": "Charles H"
+                }
+            ],
+            "container-title": "Genetics",
+            "id": "charlesworth2016hubby",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "1497-1503",
+            "publisher": "Oxford University Press",
+            "title": "Hubby and lewontin on protein variation in natural populations: When molecular genetics came to the rescue of population genetics",
+            "title-short": "Hubby and lewontin on protein variation in natural populations",
+            "type": "article-journal",
+            "volume": "203"
+        },
+        {
+            "DOI": "10.1007/978-1-4684-9063-3_14",
+            "ISBN": "978-1-4684-9065-7",
+            "author": [
+                {
+                    "family": "Lewontin",
+                    "given": "Richard C."
+                }
+            ],
+            "collection-title": "Evolutionary biology",
+            "container-title": "Evolutionary biology",
+            "editor": [
+                {
+                    "family": "Dobzhansky",
+                    "given": "Theodosius"
+                },
+                {
+                    "family": "Hecht",
+                    "given": "Max K."
+                },
+                {
+                    "family": "Steere",
+                    "given": "William C."
+                }
+            ],
+            "id": "Lewontin1972Apportionment",
+            "issued": {
+                "date-parts": [
+                    [
+                        1972
+                    ]
+                ]
+            },
+            "page": "381-398",
+            "publisher": "Springer, New York, NY",
+            "title": "The apportionment of human diversity",
+            "type": "chapter",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Linck",
+                    "given": "Ethan B"
+                },
+                {
+                    "family": "Cadena",
+                    "given": "Carlos Daniel"
+                }
+            ],
+            "container-title": "Molecular Ecology",
+            "id": "linck2024latitudinal",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "page": "e17551",
+            "publisher": "Wiley Online Library",
+            "title": "A latitudinal gradient of reference genomes",
+            "type": "article-journal"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}

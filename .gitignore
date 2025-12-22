@@ -1,0 +1,11 @@
+/.quarto/
+
+**/*.quarto_ipynb
+
+/_book/
+/_site/
+*.log
+*.aux
+*.out
+.DS_Store
+.Rhistory
