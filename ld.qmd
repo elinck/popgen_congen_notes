@@ -84,7 +84,7 @@ p1
 
 Gray wolves (*Canis familiaris*) in Scandinavia underwent a severe population bottleneck: after local extirpation in the middle of the 20th century, a single pair of immigrant wolves from the Finnish / Russian border eventually resettled central Sweden and began to reproduce. This pair and a third immigrant male arriving a decade or so later were the sole founders of a population that was estimated at 150 individuals in 18 packs in 2009. Because nearly all mating events in subsequent generations involved close relatives, Scandinavian wolves are highly inbred. Hagenblad et al. [@hagenblad2009population] genotyped wolves from this population at 250 microsatellite markers with a known location in the canine genome. They found linkage disequilibrium values (measured by $D'$) extended long physical distances---exactly what you would expect if genetic drift as a result of extremely small population sizes led to nonrandom associations among loci. 
 
-![*A gray wolf in Finland (\emph{https://www.inaturalist.org/observations/97159791}) and Figure 2 from Hagenblad et al. "Mb" refers to physical distance along chromosomes in megabases*](images/wolves.png)
+![*A gray wolf in Finland* (<https://www.inaturalist.org/observations/97159791>) *and Figure 2 from Hagenblad et al. "Mb" refers to physical distance along chromosomes in megabases*](images/wolves.png)
 
 :::
 
