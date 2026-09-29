@@ -52,7 +52,7 @@ The last case we will address is partial dominance, which we will model with the
 
 |                       |                                |                                |                                       |                    |
 |:----------------|:-------------|:-------------|:-------------|:-------------|
-| phenotype             | normal                         | normal                         | sickly                                | total              |
+| phenotype             | normal                         | iffy                           | sickly                                | total              |
 | genotype              | AA                             | Aa                             | aa                                    | 1                  |
 | relative fitness      | 1                              | 1 - $hs$                       | 1 - $s$                               | 1                  |
 | freqs                 | $p^2$                          | $2pq$                          | $q^2$                                 | 1                  |
@@ -68,15 +68,15 @@ $$ $$
 $$ $$
 \Delta p = \frac{p^2 + pq - hspq}{1 - 2hspq - sq^2} - \frac{p(1 - 2hspq - sq^2)}{1 - 2hspq - sq^2} = \frac{(p^2 + pq - hspq) - p(1 - 2hspq - sq^2)}{1 - 2hspq - sq^2}\\
 $$ $$
-\Delta p = \frac{p((p + q - hsq) - (1 - 2hspq - sq^2))}{1 - 2hspq - sq^2}
+\Delta p = \frac{p((p + q - hsq) - (1 + 2hspq + sq^2))}{1 - 2hspq - sq^2}
 $$
 
 Once again substituting 1 for $p + q$:
 
 $$
-\Delta p = \frac{p(1 - hsq - 1 - 2hspq - sq^2)}{1 - 2hspq - sq^2} 
+\Delta p = \frac{p(1 - hsq - 1 + 2hspq + sq^2)}{1 - 2hspq - sq^2} 
 $$ $$
-\Delta p = \frac{p(- hsq + 2hspq - sq^2)}{1 - 2hspq - sq^2} = \frac{p((2pq-q)hs + sq^2)}{1 - 2hspq - sq^2} = \frac{spq((2p-1)h + q)}{1 - 2hspq - sq^2}
+\Delta p = \frac{p(- hsq + 2hspq + sq^2)}{1 - 2hspq - sq^2} = \frac{p((2pq-q)hs + sq^2)}{1 - 2hspq - sq^2} = \frac{spq((2p-1)h + q)}{1 - 2hspq - sq^2}
 $$ Because $2p -1 = p + p -1$ and $p = 1 - q$, $2p -1 = p + 1 - q -1 = p - q$:
 
 $$
