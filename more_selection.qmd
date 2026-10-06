@@ -69,21 +69,21 @@ $$
 \Delta p = p_1 - p_0 = p_0(1 - \mu) - p_0 = p_0 - \mu p_0 - p_0 = -\mu p_0
 $$
 
-We can also use this relationship to build a model of how mutation changes allele frequencies $t$ generations in the future. If $p1 = p_0(1 - \mu )$, then $p2 = p_1(1 - \mu ) = p_0(1 - \mu)*p_0(1 - \mu) = p_0(1 - \mu)^2$. Therefore, $p_t = p_0(1 - \mu)^t$, which means that $p_t \sim p_0e^{-ut}$. (This equation is an approximation of exponential decay.)  
+We can also use this relationship to build a model of how mutation changes allele frequencies $t$ generations in the future. If $p_1 = p_0(1 - \mu )$, then $p_2 = p_1(1 - \mu ) = p_0(1 - \mu)*(1 - \mu) = p_0(1 - \mu)^2$. Therefore, $p_t = p_0(1 - \mu)^t$, which means that $p_t \sim p_0e^{-\mu t}$. (This equation is an approximation of exponential decay.)  
 
 An immediate application of our model is to address the question of how long it takes for mutation to restore lost genetic diversity. We can do this by isolating $t$ in the equation above:  
 
 $$
-p_t \sim p_0e^{-ut}
+p_t \sim p_0e^{-\mu t}
 $$
 $$
-\frac{p_t}{p_0} = e^{-ut}
+\frac{p_t}{p_0} = e^{-\mu t}
 $$
 $$
-ln(\frac{p_t}{p_0}) = -ut
+ln(\frac{p_t}{p_0}) = -\mu t
 $$
 $$
-\frac{ln(\frac{p_t}{p_0})}{-u} = \frac{ln(p_t)-ln(p_0)}{-u} = \frac{-ln(p_0)-ln(p_t)}{u} = t
+\frac{ln(\frac{p_t}{p_0})}{-\mu } = \frac{ln(p_t)-ln(p_0)}{-\mu} = \frac{-ln(p_0)-ln(p_t)}{\mu} = t
 $$
 We can apply this equation if (for example) we have a mutation rate of $10^{-6}$ and want to know how long it takes for $p$ to go from a frequency of 1 to 0.9: 
 
@@ -98,10 +98,10 @@ But what happens if we have mutation in two directions? In this model, allele $A
 In this scenario, we would expect the equilibrium frequency of each allele to be determined by the relative strength of mutation in each direction:
 
 $$
-\hat{p} = \frac{v}{u+v};\text{   } \hat{q} = \frac{u}{u+v}
+\hat{p} = \frac{v}{\mu+v};\text{   } \hat{q} = \frac{\mu}{u+v}
 $$
 
-For example: what is the equilibrium frequency of $A_2$ if $u=10^{-5}$ and $v=3*10^{-6}$?
+For example: what is the equilibrium frequency of $A_2$ if $\mu=10^{-5}$ and $v=3*10^{-6}$?
 
 $$
 \hat{q} = \frac{10^{-5}}{10^{-5}+(3*10^{-6})} = 0.77
@@ -116,23 +116,23 @@ $$
 $$ Assuming a model of simple dominance, we know that deleterious mutations increase as a product of their forward mutation rate ($u$) and frequency ($p$), and decrease at rate determined by the one locus selection models we covered last week ($\frac{-spq^2}{1-spq^2}$). Therefore:
 
 $$
-\Delta q = up - \frac{spq^2}{1-sq^2}
+\Delta q = \mu p - \frac{spq^2}{1-sq^2}
 $$
 
 Since $sq^2$ is an incredible small quantity for rare alleles, the denominator is essentially 1, so
 
 $$
-\Delta q = up - spq^2
+\Delta q = \mu p - spq^2
 $$
 
 By definition, an equilibrium is when inputs (mutations) match outputs (alleles to selection) ($\Delta q = 0$). When this is true, $up \sim  spq^2$. We can divide both sides of the similarity by $sp$ to isolate $q^2$:
 
 $$
-0 \sim up + spq^2; \text{  } up \sim spq^2; \text{  } \frac{up}{sp} =  \frac{u}{s} \sim q^2
+0 \sim \mu p + spq^2; \text{  } \mu p \sim spq^2; \text{  } \frac{\mu p}{sp} =  \frac{\mu}{s} \sim q^2
 $$ We then take the square root of the right side of the equation to derive the equilibrium frequency of $A_{2}$:
 
 $$
-\hat{q} \sim \sqrt{\frac{u}{s}}
+\hat{q} \sim \sqrt{\frac{\mu}{s}}
 $$ In plain English, the equilibrium frequency of $q$ will be the square root of the ratio of mutation from $A_1$ to $A_2$ to mutation from $A_2$ to $A_1$. We further know that:
 
 -   The equilibrium only depends on the mutation rate and the selection coefficient

@@ -345,16 +345,16 @@ p_{1} = 0.6999825
 <p><span class="math display">\[
 \Delta p = p_1 - p_0 = p_0(1 - \mu) - p_0 = p_0 - \mu p_0 - p_0 = -\mu p_0
 \]</span></p>
-<p>We can also use this relationship to build a model of how mutation changes allele frequencies <span class="math inline">\(t\)</span> generations in the future. If <span class="math inline">\(p1 = p_0(1 - \mu )\)</span>, then <span class="math inline">\(p2 = p_1(1 - \mu ) = p_0(1 - \mu)*p_0(1 - \mu) = p_0(1 - \mu)^2\)</span>. Therefore, <span class="math inline">\(p_t = p_0(1 - \mu)^t\)</span>, which means that <span class="math inline">\(p_t \sim p_0e^{-ut}\)</span>. (This equation is an approximation of exponential decay.)</p>
+<p>We can also use this relationship to build a model of how mutation changes allele frequencies <span class="math inline">\(t\)</span> generations in the future. If <span class="math inline">\(p_1 = p_0(1 - \mu )\)</span>, then <span class="math inline">\(p_2 = p_1(1 - \mu ) = p_0(1 - \mu)*(1 - \mu) = p_0(1 - \mu)^2\)</span>. Therefore, <span class="math inline">\(p_t = p_0(1 - \mu)^t\)</span>, which means that <span class="math inline">\(p_t \sim p_0e^{-\mu t}\)</span>. (This equation is an approximation of exponential decay.)</p>
 <p>An immediate application of our model is to address the question of how long it takes for mutation to restore lost genetic diversity. We can do this by isolating <span class="math inline">\(t\)</span> in the equation above:</p>
 <p><span class="math display">\[
-p_t \sim p_0e^{-ut}
+p_t \sim p_0e^{-\mu t}
 \]</span> <span class="math display">\[
-\frac{p_t}{p_0} = e^{-ut}
+\frac{p_t}{p_0} = e^{-\mu t}
 \]</span> <span class="math display">\[
-ln(\frac{p_t}{p_0}) = -ut
+ln(\frac{p_t}{p_0}) = -\mu t
 \]</span> <span class="math display">\[
-\frac{ln(\frac{p_t}{p_0})}{-u} = \frac{ln(p_t)-ln(p_0)}{-u} = \frac{-ln(p_0)-ln(p_t)}{u} = t
+\frac{ln(\frac{p_t}{p_0})}{-\mu } = \frac{ln(p_t)-ln(p_0)}{-\mu} = \frac{-ln(p_0)-ln(p_t)}{\mu} = t
 \]</span> We can apply this equation if (for example) we have a mutation rate of <span class="math inline">\(10^{-6}\)</span> and want to know how long it takes for <span class="math inline">\(p\)</span> to go from a frequency of 1 to 0.9:</p>
 <p><span class="math display">\[
 \frac{-ln(1)-ln(0.9)}{10^{-6}} = t = 105,360\text{ generations}
@@ -368,9 +368,9 @@ ln(\frac{p_t}{p_0}) = -ut
 <p>But what happens if we have mutation in two directions? In this model, allele <span class="math inline">\(A_1\)</span> (occuring at frequency <span class="math inline">\(p_0\)</span>) still mutates to become <span class="math inline">\(A_2\)</span> (occuring at frequency <span class="math inline">\(q_0\)</span>) at rate <span class="math inline">\(u\)</span>, but we also permit <span class="math inline">\(A_2\)</span> to mutate back to <span class="math inline">\(A_1\)</span> at rate <span class="math inline">\(v\)</span>:</p>
 <p>In this scenario, we would expect the equilibrium frequency of each allele to be determined by the relative strength of mutation in each direction:</p>
 <p><span class="math display">\[
-\hat{p} = \frac{v}{u+v};\text{   } \hat{q} = \frac{u}{u+v}
+\hat{p} = \frac{v}{\mu+v};\text{   } \hat{q} = \frac{\mu}{u+v}
 \]</span></p>
-<p>For example: what is the equilibrium frequency of <span class="math inline">\(A_2\)</span> if <span class="math inline">\(u=10^{-5}\)</span> and <span class="math inline">\(v=3*10^{-6}\)</span>?</p>
+<p>For example: what is the equilibrium frequency of <span class="math inline">\(A_2\)</span> if <span class="math inline">\(\mu=10^{-5}\)</span> and <span class="math inline">\(v=3*10^{-6}\)</span>?</p>
 <p><span class="math display">\[
 \hat{q} = \frac{10^{-5}}{10^{-5}+(3*10^{-6})} = 0.77
 \]</span></p>
@@ -379,18 +379,18 @@ ln(\frac{p_t}{p_0}) = -ut
 \Delta q = \Delta q_{mutation} + \Delta q_{selection}
 \]</span> Assuming a model of simple dominance, we know that deleterious mutations increase as a product of their forward mutation rate (<span class="math inline">\(u\)</span>) and frequency (<span class="math inline">\(p\)</span>), and decrease at rate determined by the one locus selection models we covered last week (<span class="math inline">\(\frac{-spq^2}{1-spq^2}\)</span>). Therefore:</p>
 <p><span class="math display">\[
-\Delta q = up - \frac{spq^2}{1-sq^2}
+\Delta q = \mu p - \frac{spq^2}{1-sq^2}
 \]</span></p>
 <p>Since <span class="math inline">\(sq^2\)</span> is an incredible small quantity for rare alleles, the denominator is essentially 1, so</p>
 <p><span class="math display">\[
-\Delta q = up - spq^2
+\Delta q = \mu p - spq^2
 \]</span></p>
 <p>By definition, an equilibrium is when inputs (mutations) match outputs (alleles to selection) (<span class="math inline">\(\Delta q = 0\)</span>). When this is true, <span class="math inline">\(up \sim  spq^2\)</span>. We can divide both sides of the similarity by <span class="math inline">\(sp\)</span> to isolate <span class="math inline">\(q^2\)</span>:</p>
 <p><span class="math display">\[
-0 \sim up + spq^2; \text{  } up \sim spq^2; \text{  } \frac{up}{sp} =  \frac{u}{s} \sim q^2
+0 \sim \mu p + spq^2; \text{  } \mu p \sim spq^2; \text{  } \frac{\mu p}{sp} =  \frac{\mu}{s} \sim q^2
 \]</span> We then take the square root of the right side of the equation to derive the equilibrium frequency of <span class="math inline">\(A_{2}\)</span>:</p>
 <p><span class="math display">\[
-\hat{q} \sim \sqrt{\frac{u}{s}}
+\hat{q} \sim \sqrt{\frac{\mu}{s}}
 \]</span> In plain English, the equilibrium frequency of <span class="math inline">\(q\)</span> will be the square root of the ratio of mutation from <span class="math inline">\(A_1\)</span> to <span class="math inline">\(A_2\)</span> to mutation from <span class="math inline">\(A_2\)</span> to <span class="math inline">\(A_1\)</span>. We further know that:</p>
 <ul>
 <li>The equilibrium only depends on the mutation rate and the selection coefficient</li>
