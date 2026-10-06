@@ -270,6 +270,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a></li>
+  <li><a href="#time-required-for-a-given-allele-frequency-change" id="toc-time-required-for-a-given-allele-frequency-change" class="nav-link" data-scroll-target="#time-required-for-a-given-allele-frequency-change"><span class="header-section-number">7.2</span> Time required for a given allele frequency change</a></li>
   </ul>
 </nav>
     </div>
@@ -354,11 +355,11 @@ window.Quarto = {
 <p><span class="math display">\[
 \frac{0 + pq}{1 - q^2} = \frac{q(1 - q)}{(1 - q)(1 + q)} = \frac{q}{1 + q}
 \]</span> (Note that since <span class="math inline">\(p + q = 1\)</span>, <span class="math inline">\(p = 1-q\)</span>).</p>
-<p>The change in the frequency of <span class="math inline">\(q\)</span> (<span class="math inline">\(\Delta q\)</span>) will be the difference between the new frequency of <span class="math inline">\(q\)</span> (<span class="math inline">\(q_1\)</span>) and and its initial frequency (<span class="math inline">\(q\)</span>):</p>
+<p>The change in the frequency of <span class="math inline">\(q\)</span> (<span class="math inline">\(\Delta q\)</span>) will be the difference between the new frequency of <span class="math inline">\(q\)</span> (<span class="math inline">\(q_1\)</span>) and its initial frequency (<span class="math inline">\(q\)</span>):</p>
 <p><span class="math display">\[
 \Delta q = q_1 - q = \frac{q}{1 + q} - q = \frac{q}{1 + q} - \frac{q(1 + q)}{1 + q} = \frac{q - q(1 +q)}{1 + q} = \frac{q - q - q^2}{1 + q} = \frac{-q^2}{1 + q}
 \]</span></p>
-<p>We can expand this model for nonlethal cases where homozygous recessive genotypes have lower relative fitness by a quantity <span class="math inline">\(s\)</span>, which w will refer to as the <em>selection coefficient</em>:</p>
+<p>We can expand this model for nonlethal cases where homozygous recessive genotypes have lower relative fitness by a quantity <span class="math inline">\(s\)</span>, which we will refer to as the <em>selection coefficient</em>:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
@@ -415,7 +416,7 @@ window.Quarto = {
 <p>What, then, will happen to the frequency of allele <span class="math inline">\(p\)</span> given a <span class="math inline">\(q\)</span> has a fitness of <span class="math inline">\(1 - s\)</span>? We know that its frequency in the next generation will be the adjusted frequency of homozygotes plus 1/2 the adjusted frequency of heterozygotes:</p>
 <p><span class="math display">\[
 p_1 = \frac{p^2}{1 - sq^2} + \frac{1}{2}(\frac{2pq}{1 - sq^2}) = \frac{p^2 + pq}{1 - sq^2} = \frac{p(p + q)}{1 - sq^2} = \frac{p}{1 - sq^2}
-\]</span> This gives us <span class="math inline">\(p_1\)</span>, or the frequency of <span class="math inline">\(p\)</span> in the next generation. (Note again that one step above involves substituting <span class="math inline">\(p+q\)</span> for <span class="math inline">\(1\)</span>.) The change (<span class="math inline">\(\Delta\)</span>) in <span class="math inline">\(p\)</span> between generations is simply <span class="math inline">\(\Delta p = p_1 - p\)</span>:</p>
+\]</span> This gives us <span class="math inline">\(p_1\)</span>, or the frequency of <span class="math inline">\(p\)</span> in the next generation. (Note again that one step above involves substituting <span class="math inline">\(1\)</span> for <span class="math inline">\(p+q\)</span>.) The change (<span class="math inline">\(\Delta\)</span>) in <span class="math inline">\(p\)</span> between generations is simply <span class="math inline">\(\Delta p = p_1 - p\)</span>:</p>
 <p><span class="math display">\[
 \Delta p = \frac{p}{1 - sq^2} - p = \frac{p}{1 - sq^2} - \frac{p(1 - sq^2)}{1 - sq^2}
 \]</span> <span class="math display">\[
@@ -469,7 +470,7 @@ p_1 = \frac{p^2}{1 - sq^2} + \frac{1}{2}(\frac{2pq}{1 - sq^2}) = \frac{p^2 + pq}
 <tr class="even">
 <td style="text-align: left;">adjusted freqs</td>
 <td style="text-align: left;"><span class="math inline">\(\frac{p^2}{1 - 2hspq - sq^2}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{2pq}{1 - 2hspq - sq^2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{2pq - 2hspq}{1 - 2hspq - sq^2}\)</span></td>
 <td style="text-align: left;"><span class="math inline">\(\frac{q^2 - sq^2}{1 - 2hspq - sq^2}\)</span></td>
 <td style="text-align: left;">1</td>
 </tr>
@@ -527,6 +528,28 @@ q_1=\frac{q}{1 + q}
 \]</span> <span class="math display">\[
 \Delta p = 0.1566; \text{  } \Delta q = -0.1566
 \]</span></p>
+</section>
+<section id="time-required-for-a-given-allele-frequency-change" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="time-required-for-a-given-allele-frequency-change"><span class="header-section-number">7.2</span> Time required for a given allele frequency change</h2>
+<p>As discussed above, the frequency of a lethal deleterious allele in the next generation is <span class="math inline">\(q_1=\frac{q}{1 + q}\)</span>. It follows that its frequency in the generation <em>after that</em> is <span class="math inline">\(q_2=\frac{q_1}{1 + q_1}\)</span>. Since we know what <span class="math inline">\(q_1\)</span> is in terms of <span class="math inline">\(q\)</span> (the original allele frequency), we can substitute it and solve for a general relationship:</p>
+<p><span class="math display">\[
+q_2 = \frac{\frac{q_0}{1+q_0}}{1 + \frac{q_0}{1+q_0}} = \frac{q_0}{1+q_0} \div 1 + \frac{q_0}{1+q_0}
+\]</span> <span class="math display">\[
+q_2 = \frac{q_0}{1+q_0} \div \frac{{1+q_0}}{{1+q_0}} + \frac{q_0}{1+q_0} = \frac{q_0}{1+q_0} \div \frac{{1+q_0 + q_0}}{{1+q_0}}
+\]</span> <span class="math display">\[
+q_2 = \frac{q_0}{1+q_0} \div \frac{{1+2q_0}}{{1+q_0}} =  \frac{q_0}{1+q_0}*\frac{{1+q_0}}{{1+2q_0}} = \frac{q_0(1+q_0)}{(1 + q_0)(1 + 2q_0)} = \frac{q_0}{1 + 2q_0}
+\]</span> By extension, <span class="math inline">\(q_t = \frac{q_0}{1 + tq_0}\)</span>.</p>
+<p>We can rearrange this to get the number of generations (<span class="math inline">\(t\)</span>) required to change the allele frequency from <span class="math inline">\(q_0\)</span> to <span class="math inline">\(q_t\)</span>:</p>
+<p><span class="math display">\[
+q_t = \frac{q_0}{1 + tq_0}; \text{  } q_t(1 + tq_0) = q_0
+\]</span> <span class="math display">\[
+q_t + tq_0q_t = q_0; \text{ } tq_0q_t = q_0-q_t
+\]</span> <span class="math display">\[
+t = \frac{(q_0 - q_t)}{q_0q_t}=\frac{1}{q_t}-\frac{1}{q_0}
+\]</span> We can apply this to determine how long it would take for a recessive lethal allele to drop from a frequency of <span class="math inline">\(f(q_0)=0.7\)</span> to <span class="math inline">\(f(q_t)=0.2\)</span>:</p>
+<p><span class="math display">\[
+t = \frac{1}{0.2}-\frac{1}{0.7} = 3.57 \text{ generations}
+\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled" title="Selection on Armor in Sticklebacks">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -537,7 +560,7 @@ q_1=\frac{q}{1 + q}
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Freshwater threespine stickleback (<em>Gasterosteus aculeatus</em>) on the coast of British Columbia are derived from heavily-armored marine ancestors, but have repeatedly evolved a reduced number of lateral plates. Hypothesizing this transition was due to developmental advantages associated with avoiding investment in plate development, Rowan Barrett and colleagues (<span class="citation" data-cites="barrett2008natural">Barrett, Rogers, and Schluter (<a href="references.html#ref-barrett2008natural" role="doc-biblioref">2008</a>)</span>) transplanted marine sticklebacks to freshwater ponds and tracked the frequency of an allele associated with fewer lateral plates through time. They observed increases in multiple replicate populations, indicating selection consist with their growth advantage hypothesis (though oscillations in the fitness of genotypes throughout each fish’s life cycle suggest the story is more complicated).</p>
+<p>Freshwater threespine stickleback (<em>Gasterosteus aculeatus</em>) on the coast of British Columbia are derived from heavily-armored marine ancestors, but have repeatedly evolved a reduced number of lateral plates. Hypothesizing this transition was due to developmental advantages associated with avoiding investment in plate development, Rowan Barrett and colleagues (<span class="citation" data-cites="barrett2008natural">Barrett, Rogers, and Schluter (<a href="references.html#ref-barrett2008natural" role="doc-biblioref">2008</a>)</span>) transplanted marine sticklebacks to freshwater ponds and tracked the frequency of an allele associated with fewer lateral plates through time. They observed increases in multiple replicate populations, indicating selection consistent with their growth advantage hypothesis (though oscillations in the fitness of genotypes throughout each fish’s life cycle suggest the story is more complicated).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/schluter.png" class="img-fluid figure-img"></p>

@@ -19,13 +19,13 @@ $$
 \frac{0 + pq}{1 - q^2} = \frac{q(1 - q)}{(1 - q)(1 + q)} = \frac{q}{1 + q}
 $$ (Note that since $p + q = 1$, $p = 1-q$).
 
-The change in the frequency of $q$ ($\Delta q$) will be the difference between the new frequency of $q$ ($q_1$) and and its initial frequency ($q$):
+The change in the frequency of $q$ ($\Delta q$) will be the difference between the new frequency of $q$ ($q_1$) and its initial frequency ($q$):
 
 $$
 \Delta q = q_1 - q = \frac{q}{1 + q} - q = \frac{q}{1 + q} - \frac{q(1 + q)}{1 + q} = \frac{q - q(1 +q)}{1 + q} = \frac{q - q - q^2}{1 + q} = \frac{-q^2}{1 + q}
 $$
 
-We can expand this model for nonlethal cases where homozygous recessive genotypes have lower relative fitness by a quantity $s$, which w will refer to as the *selection coefficient*:
+We can expand this model for nonlethal cases where homozygous recessive genotypes have lower relative fitness by a quantity $s$, which we will refer to as the *selection coefficient*:
 
 |                       |                      |                      |                               |            |
 |:----------------|:-------------|:-------------|:-------------|:-------------|
@@ -40,7 +40,7 @@ What, then, will happen to the frequency of allele $p$ given a $q$ has a fitness
 
 $$
 p_1 = \frac{p^2}{1 - sq^2} + \frac{1}{2}(\frac{2pq}{1 - sq^2}) = \frac{p^2 + pq}{1 - sq^2} = \frac{p(p + q)}{1 - sq^2} = \frac{p}{1 - sq^2}
-$$ This gives us $p_1$, or the frequency of $p$ in the next generation. (Note again that one step above involves substituting $p+q$ for $1$.) The change ($\Delta$) in $p$ between generations is simply $\Delta p = p_1 - p$:
+$$ This gives us $p_1$, or the frequency of $p$ in the next generation. (Note again that one step above involves substituting $1$ for $p+q$.) The change ($\Delta$) in $p$ between generations is simply $\Delta p = p_1 - p$:
 
 $$
 \Delta p = \frac{p}{1 - sq^2} - p = \frac{p}{1 - sq^2} - \frac{p(1 - sq^2)}{1 - sq^2} 
@@ -57,7 +57,7 @@ The last case we will address is partial dominance, which we will model with the
 | relative fitness      | 1                              | 1 - $hs$                       | 1 - $s$                               | 1                  |
 | freqs                 | $p^2$                          | $2pq$                          | $q^2$                                 | 1                  |
 | freqs after selection | $p^2$                          | $2pq(1 - hs) = 2pq - 2hspq$    | $q^2(1 - s) = q^2 - sq^2$             | $1 - 2hspq - sq^2$ |
-| adjusted freqs        | $\frac{p^2}{1 - 2hspq - sq^2}$ | $\frac{2pq}{1 - 2hspq - sq^2}$ | $\frac{q^2 - sq^2}{1 - 2hspq - sq^2}$ | 1                  |
+| adjusted freqs        | $\frac{p^2}{1 - 2hspq - sq^2}$ | $\frac{2pq - 2hspq}{1 - 2hspq - sq^2}$ | $\frac{q^2 - sq^2}{1 - 2hspq - sq^2}$ | 1                  |
 
 Turning this into an expression for $\Delta p$ is a little gnarly:
 
@@ -121,8 +121,41 @@ $$ $$
 \Delta p = 0.1566; \text{  } \Delta q = -0.1566
 $$
 
+## Time required for a given allele frequency change
+
+As discussed above, the frequency of a lethal deleterious allele in the next generation is $q_1=\frac{q}{1 + q}$. It follows that its frequency in the generation *after that* is $q_2=\frac{q_1}{1 + q_1}$. Since we know what $q_1$ is in terms of $q$ (the original allele frequency), we can substitute it and solve for a general relationship: 
+
+$$
+q_2 = \frac{\frac{q_0}{1+q_0}}{1 + \frac{q_0}{1+q_0}} = \frac{q_0}{1+q_0} \div 1 + \frac{q_0}{1+q_0}
+$$
+$$
+q_2 = \frac{q_0}{1+q_0} \div \frac{{1+q_0}}{{1+q_0}} + \frac{q_0}{1+q_0} = \frac{q_0}{1+q_0} \div \frac{{1+q_0 + q_0}}{{1+q_0}} 
+$$
+$$
+q_2 = \frac{q_0}{1+q_0} \div \frac{{1+2q_0}}{{1+q_0}} =  \frac{q_0}{1+q_0}*\frac{{1+q_0}}{{1+2q_0}} = \frac{q_0(1+q_0)}{(1 + q_0)(1 + 2q_0)} = \frac{q_0}{1 + 2q_0}
+$$
+By extension, $q_t = \frac{q_0}{1 + tq_0}$. 
+
+We can rearrange this to get the number of generations ($t$) required to change the allele frequency from $q_0$ to $q_t$:
+
+$$
+q_t = \frac{q_0}{1 + tq_0}; \text{  } q_t(1 + tq_0) = q_0
+$$
+$$
+q_t + tq_0q_t = q_0; \text{ } tq_0q_t = q_0-q_t
+$$
+$$
+t = \frac{(q_0 - q_t)}{q_0q_t}=\frac{1}{q_t}-\frac{1}{q_0}
+$$
+We can apply this to determine how long it would take for a recessive lethal allele to drop from a frequency of $f(q_0)=0.7$ to $f(q_t)=0.2$:
+
+$$
+t = \frac{1}{0.2}-\frac{1}{0.7} = 3.57 \text{ generations}
+$$
+
+
 ::: {.callout-note title="Selection on Armor in Sticklebacks"}
-Freshwater threespine stickleback (*Gasterosteus aculeatus*) on the coast of British Columbia are derived from heavily-armored marine ancestors, but have repeatedly evolved a reduced number of lateral plates. Hypothesizing this transition was due to developmental advantages associated with avoiding investment in plate development, Rowan Barrett and colleagues (@barrett2008natural) transplanted marine sticklebacks to freshwater ponds and tracked the frequency of an allele associated with fewer lateral plates through time. They observed increases in multiple replicate populations, indicating selection consist with their growth advantage hypothesis (though oscillations in the fitness of genotypes throughout each fish's life cycle suggest the story is more complicated).
+Freshwater threespine stickleback (*Gasterosteus aculeatus*) on the coast of British Columbia are derived from heavily-armored marine ancestors, but have repeatedly evolved a reduced number of lateral plates. Hypothesizing this transition was due to developmental advantages associated with avoiding investment in plate development, Rowan Barrett and colleagues (@barrett2008natural) transplanted marine sticklebacks to freshwater ponds and tracked the frequency of an allele associated with fewer lateral plates through time. They observed increases in multiple replicate populations, indicating selection consistent with their growth advantage hypothesis (though oscillations in the fitness of genotypes throughout each fish's life cycle suggest the story is more complicated).
 
 ![*Figures 1 and 2a from Barrett et al. 2008. Left: Plate morphs in threespine sticklebacks, with an individual homozygous for the "low" allele at the bottom of the image. Right: the change in frequency of the "low" morph allele through time in replicate freshwater ponds*](images/schluter.png)
 :::

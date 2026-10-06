@@ -1,6 +1,115 @@
+
+The next violation of HWP assumptions we will examine is mutation. Mutations are a sudden genetic change in an allele or chromosome. They can be caused by the impacts of oxygen, radiation, chemicals, or cellular processes. DNA repair fixes many mutations but is imperfect. Importantly, mutations are the origin of all genetic diversity. 
+
+Common types of mutations include: 
+
+- Base substitutions
+- Additions or deletions in DNA sequences
+- Gene duplications
+- Insertion of mobile DNA elements (**transposons**)
+
+While we often think of mutations as inherently negative, they can have a variety of fitness effects: 
+
+- **silent substitutions**: a mutation in a coding region that does not result in an amino acid substitution in a protein
+- **neutral mutations**: mutations with little to no impact on fitness
+- **deleterious mutations**: mutations that negatively impact fitness
+- **beneficial mutations**: mutations that positively impact fitness
+
+Importantly, some mutations may be beneficial in some circumstances but not others!
+
+A key parameter for a given mutation type is its rate, typically denoted by $u$ or $\mu$ ("myu"). Mutation rates describe the probability of mutation per unit per generation. Different genetic markers have different rates. As a set of benchmarks: 
+
+- 1 x $10^{-8}$ to 1 x $10^{-9}$ per base per year: DNA nucleotides
+- mammalian mtDNA typically has 5 - 10x the nuclear DNA mutation rate
+- 1 x $10^{-4}$ per locus: mammalian microsatellites
+- 1 x $10^{-5}$ per locus: morphological mutations in fruit flies
+
+For example, a per nucleotide rate of $10^{-5}$ (equivalent to $\frac{1}{100000}$) leads us to expect a single mutation in a stretch of 100,000 bases each generation (because the independent probabilities of mutation at each base are summed). If instead our mutation rate is per *gene* and we know there are roughly 20,000 genes in the human genome, we would expect $10^{-5} * 20,000 = 0.2$ mutations per individual (so, roughly every 5 individuals we'll find one new mutation in a coding region).
+
+The probability of an individual NOT having a mutation in one of their 20,000 genes is a little more complicated. To determine it, we need to account for both the probability of no mutation in their maternally-inherited chromosomes and the probability of no mutation in their paternally inherited chromosomes. Each haploid genome requires multiplying the independent probability of NO mutation ($=1-\mu$) by itself 20,000 times, as these independently probabilities must occur concurrently. We then must multiply the probabilities of no mutation in each haploid genome by each other, as these two events must also occur together: 
+
+$$
+p(\text{no mutation}) =  (1-\mu)^{20000} + (1-\mu)^{20000} = (1-\mu)^{40000} = (1-\frac{1}{100000})^{40000} \sim 0.67
+$$
+
+Conversely, to find the probability of at least one new mutation in a coding region in a human's diploid genome, we can either take the complement of no mutation (i.e., $1-0.67=0.23$). 
+
+But what does this mean for allele frequencies? We start with a simple model where allele $A_1$ (occuring at frequency $p_0$) mutates to become $A_2$ (occuring at frequency $q_0$) at rate $u$ / $\mu$. (For now, we assume mutation is only one-dimensional.) 
+
+![*A simple model of one-directional mutation*](images/fwd_mut.png){width=50%}
+
+The frequency of $A_1$ in the next generation ($p_1$) will be its initial frequency multiplied by the complement of the mutation rate, i.e. the expected proportion of alleles that do NOT mutate:  
+
+$$
+p_1 = p_0(1 - \mu)
+$$
+
+We can use this formula in the following example: 
+
+Q: What is the frequency of allele $A_{1}$ in the next generation if its mutation rate $u$ is 2.5 x $10^{-5}$ and it occurs at an initial frequency of 0.7?
+
+A: 
+
+$$
+p_{1} = p_{0}(1 - u);  
+$$
+$$
+p_{1} = 0.7(1 - 0.000025);  
+$$
+
+$$
+p_{1} = 0.6999825  
+$$
+
+This shows us that among other things, mutation is a *slow* way to change allele frequencies and restore genetic diversity!
+
+This same model helps us determine the change in $A_1$ from generation to generation: it is the difference between $p_1$ and $p_0$, which simplifies to the negative product of the mutation rate and initial frequency of $A_1$: 
+
+$$
+\Delta p = p_1 - p_0 = p_0(1 - \mu) - p_0 = p_0 - \mu p_0 - p_0 = -\mu p_0
+$$
+
+We can also use this relationship to build a model of how mutation changes allele frequencies $t$ generations in the future. If $p1 = p_0(1 - \mu )$, then $p2 = p_1(1 - \mu ) = p_0(1 - \mu)*p_0(1 - \mu) = p_0(1 - \mu)^2$. Therefore, $p_t = p_0(1 - \mu)^t$, which means that $p_t \sim p_0e^{-ut}$. (This equation is an approximation of exponential decay.)  
+
+An immediate application of our model is to address the question of how long it takes for mutation to restore lost genetic diversity. We can do this by isolating $t$ in the equation above:  
+
+$$
+p_t \sim p_0e^{-ut}
+$$
+$$
+\frac{p_t}{p_0} = e^{-ut}
+$$
+$$
+ln(\frac{p_t}{p_0}) = -ut
+$$
+$$
+\frac{ln(\frac{p_t}{p_0})}{-u} = \frac{ln(p_t)-ln(p_0)}{-u} = \frac{-ln(p_0)-ln(p_t)}{u} = t
+$$
+We can apply this equation if (for example) we have a mutation rate of $10^{-6}$ and want to know how long it takes for $p$ to go from a frequency of 1 to 0.9: 
+
+$$
+ \frac{-ln(1)-ln(0.9)}{10^{-6}} = t = 105,360\text{ generations}
+$$
+
+![*A simple model of one-directional mutation*](images/td_mut.png){width=50%}
+
+But what happens if we have mutation in two directions? In this model, allele $A_1$ (occuring at frequency $p_0$) still mutates to become $A_2$ (occuring at frequency $q_0$) at rate $u$, but we also permit $A_2$ to mutate back to $A_1$ at rate $v$:  
+
+In this scenario, we would expect the equilibrium frequency of each allele to be determined by the relative strength of mutation in each direction:
+
+$$
+\hat{p} = \frac{v}{u+v};\text{   } \hat{q} = \frac{u}{u+v}
+$$
+
+For example: what is the equilibrium frequency of $A_2$ if $u=10^{-5}$ and $v=3*10^{-6}$?
+
+$$
+\hat{q} = \frac{10^{-5}}{10^{-5}+(3*10^{-6})} = 0.77
+$$
+
 ## Mutation, migration, and selection
 
-Next, we incorporate mutation. Selection more or less inevitably act on the new mutations that are being continuously added to populations as the majority are deleterious (it's much easier to break something than improve it!). Intuitively, the overall change in the frequency of $q$ will be equal to its change due to mutation and its change due to selection—a phenomenon known as **mutation-selection equilibrium**, or the balance between the addition of deleterious alleles by mutation and their removal by selection. For a deleterious recessive allele, this is: :
+Next, we incorporate mutation. Selection more or less inevitably acts on the new mutations that are being continuously added to populations as the majority are deleterious (it's much easier to break something than improve it!). Intuitively, the overall change in the frequency of $q$ will be equal to its change due to mutation and its change due to selection—a phenomenon known as **mutation-selection equilibrium**, or the balance between the addition of deleterious alleles by mutation and their removal by selection. For a deleterious recessive allele, this is: :
 
 $$
 \Delta q = \Delta q_{mutation} + \Delta q_{selection} 
