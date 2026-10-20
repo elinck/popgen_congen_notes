@@ -34,7 +34,7 @@ $$
 
 Conversely, to find the probability of at least one new mutation in a coding region in a human's diploid genome, we can either take the complement of no mutation (i.e., $1-0.67=0.23$). 
 
-But what does this mean for allele frequencies? We start with a simple model where allele $A_1$ (occuring at frequency $p_0$) mutates to become $A_2$ (occuring at frequency $q_0$) at rate $u$ / $\mu$. (For now, we assume mutation is only one-dimensional.) 
+But what does this mean for allele frequencies? We start with a simple model where allele $A_1$ (occuring at frequency $p_0$) mutates to become $A_2$ (occuring at frequency $q_0$) at a rate $u$ / $\mu$. (For now, we assume mutation is only one-dimensional.) 
 
 ![*A simple model of one-directional mutation*](images/fwd_mut.png){width=50%}
 
@@ -109,7 +109,7 @@ $$
 
 ## Mutation, migration, and selection
 
-Next, we incorporate mutation. Selection more or less inevitably acts on the new mutations that are being continuously added to populations as the majority are deleterious (it's much easier to break something than improve it!). Intuitively, the overall change in the frequency of $q$ will be equal to its change due to mutation and its change due to selection—a phenomenon known as **mutation-selection equilibrium**, or the balance between the addition of deleterious alleles by mutation and their removal by selection. For a deleterious recessive allele, this is: :
+Next, we incorporate mutation. Selection more or less inevitably acts on the new mutations that are being continuously added to populations as the majority are deleterious (it's much easier to break something than improve it!). Intuitively, the overall change in the frequency of $q$ will be equal to its change due to mutation and its change due to selection--a phenomenon known as **mutation-selection equilibrium**, or the balance between the addition of deleterious alleles by mutation and their removal by selection. For a deleterious recessive allele, this is: :
 
 $$
 \Delta q = \Delta q_{mutation} + \Delta q_{selection} 
@@ -169,7 +169,7 @@ $$
 \Delta q = 0.2(1 - 0) = 0.2  
 $$
 
-By similar logic, the frequency of $q$ in the generation 1 ($q_1$) will be the sum of the product of $m$ and $q_m$ and the initial frequency of $q$ and the proportion of alleles that are NOT migrants, which simplifies to the intial allele frequency plus the migration rate multiplied by the difference betwen the frequency of $q$ in the migrant population and focal population:
+By similar logic, the frequency of $q$ in the generation 1 ($q_1$) will be the sum of the product of $m$ and $q_m$ and the initial frequency of $q$ and the proportion of alleles that are NOT migrants, which simplifies to the intial allele frequency plus the migration rate multiplied by the difference between the frequency of $q$ in the migrant population and focal population:
 
 $$
 q_1 = (1 -m)q_0 + mq_m  = q_0 - mq_0 + mq_m = q_0 + m(q_m - q_0)
@@ -192,9 +192,15 @@ As an example of its application, imagine a scenario in which we wish to estimat
 To do this need to isolate $m$ from $q_1 = q_0 + m(q_m - q_0)$:
 
 $$
-q_1 = q_0 + m(q_m - q_0)\\
-q_1 - q_0 = m(q_m - q_0)\\
-\frac{q_1 - q_0}{q_m - q_0} = m\\
+q_1 = q_0 + m(q_m - q_0)
+$$
+$$
+q_1 - q_0 = m(q_m - q_0)
+$$
+$$
+\frac{q_1 - q_0}{q_m - q_0} = m
+$$
+$$
 m = \frac{0.78 - 1}{0 - 1} = 0.22
 $$
 

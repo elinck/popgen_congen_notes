@@ -318,7 +318,7 @@ window.Quarto = {
 p(\text{no mutation}) =  (1-\mu)^{20000} + (1-\mu)^{20000} = (1-\mu)^{40000} = (1-\frac{1}{100000})^{40000} \sim 0.67
 \]</span></p>
 <p>Conversely, to find the probability of at least one new mutation in a coding region in a human’s diploid genome, we can either take the complement of no mutation (i.e., <span class="math inline">\(1-0.67=0.23\)</span>).</p>
-<p>But what does this mean for allele frequencies? We start with a simple model where allele <span class="math inline">\(A_1\)</span> (occuring at frequency <span class="math inline">\(p_0\)</span>) mutates to become <span class="math inline">\(A_2\)</span> (occuring at frequency <span class="math inline">\(q_0\)</span>) at rate <span class="math inline">\(u\)</span> / <span class="math inline">\(\mu\)</span>. (For now, we assume mutation is only one-dimensional.)</p>
+<p>But what does this mean for allele frequencies? We start with a simple model where allele <span class="math inline">\(A_1\)</span> (occuring at frequency <span class="math inline">\(p_0\)</span>) mutates to become <span class="math inline">\(A_2\)</span> (occuring at frequency <span class="math inline">\(q_0\)</span>) at a rate <span class="math inline">\(u\)</span> / <span class="math inline">\(\mu\)</span>. (For now, we assume mutation is only one-dimensional.)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/fwd_mut.png" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -374,7 +374,7 @@ ln(\frac{p_t}{p_0}) = -\mu t
 <p><span class="math display">\[
 \hat{q} = \frac{10^{-5}}{10^{-5}+(3*10^{-6})} = 0.77
 \]</span></p>
-<p>Next, we incorporate mutation. Selection more or less inevitably acts on the new mutations that are being continuously added to populations as the majority are deleterious (it’s much easier to break something than improve it!). Intuitively, the overall change in the frequency of <span class="math inline">\(q\)</span> will be equal to its change due to mutation and its change due to selection—a phenomenon known as <strong>mutation-selection equilibrium</strong>, or the balance between the addition of deleterious alleles by mutation and their removal by selection. For a deleterious recessive allele, this is: :</p>
+<p>Next, we incorporate mutation. Selection more or less inevitably acts on the new mutations that are being continuously added to populations as the majority are deleterious (it’s much easier to break something than improve it!). Intuitively, the overall change in the frequency of <span class="math inline">\(q\)</span> will be equal to its change due to mutation and its change due to selection–a phenomenon known as <strong>mutation-selection equilibrium</strong>, or the balance between the addition of deleterious alleles by mutation and their removal by selection. For a deleterious recessive allele, this is: :</p>
 <p><span class="math display">\[
 \Delta q = \Delta q_{mutation} + \Delta q_{selection}
 \]</span> Assuming a model of simple dominance, we know that deleterious mutations increase as a product of their forward mutation rate (<span class="math inline">\(u\)</span>) and frequency (<span class="math inline">\(p\)</span>), and decrease at rate determined by the one locus selection models we covered last week (<span class="math inline">\(\frac{-spq^2}{1-spq^2}\)</span>). Therefore:</p>
@@ -416,7 +416,7 @@ q \sim \sqrt{\frac{3 x 10^{-5}}{0.1}} \sim 0.017
 <p><span class="math display">\[
 \Delta q = 0.2(1 - 0) = 0.2  
 \]</span></p>
-<p>By similar logic, the frequency of <span class="math inline">\(q\)</span> in the generation 1 (<span class="math inline">\(q_1\)</span>) will be the sum of the product of <span class="math inline">\(m\)</span> and <span class="math inline">\(q_m\)</span> and the initial frequency of <span class="math inline">\(q\)</span> and the proportion of alleles that are NOT migrants, which simplifies to the intial allele frequency plus the migration rate multiplied by the difference betwen the frequency of <span class="math inline">\(q\)</span> in the migrant population and focal population:</p>
+<p>By similar logic, the frequency of <span class="math inline">\(q\)</span> in the generation 1 (<span class="math inline">\(q_1\)</span>) will be the sum of the product of <span class="math inline">\(m\)</span> and <span class="math inline">\(q_m\)</span> and the initial frequency of <span class="math inline">\(q\)</span> and the proportion of alleles that are NOT migrants, which simplifies to the intial allele frequency plus the migration rate multiplied by the difference between the frequency of <span class="math inline">\(q\)</span> in the migrant population and focal population:</p>
 <p><span class="math display">\[
 q_1 = (1 -m)q_0 + mq_m  = q_0 - mq_0 + mq_m = q_0 + m(q_m - q_0)
 \]</span></p>
@@ -446,9 +446,12 @@ q_1 = (1 -m)q_0 + mq_m  = q_0 - mq_0 + mq_m = q_0 + m(q_m - q_0)
 </table>
 <p>To do this need to isolate <span class="math inline">\(m\)</span> from <span class="math inline">\(q_1 = q_0 + m(q_m - q_0)\)</span>:</p>
 <p><span class="math display">\[
-q_1 = q_0 + m(q_m - q_0)\\
-q_1 - q_0 = m(q_m - q_0)\\
-\frac{q_1 - q_0}{q_m - q_0} = m\\
+q_1 = q_0 + m(q_m - q_0)
+\]</span> <span class="math display">\[
+q_1 - q_0 = m(q_m - q_0)
+\]</span> <span class="math display">\[
+\frac{q_1 - q_0}{q_m - q_0} = m
+\]</span> <span class="math display">\[
 m = \frac{0.78 - 1}{0 - 1} = 0.22
 \]</span></p>
 <p>If migration and selection form an equilibrium allele frequency, what is it? This question is relevant to the analysis of clines and hybrid zones. We again consider the overall change in <span class="math inline">\(q\)</span> to be the sum of the change in <span class="math inline">\(q\)</span> due to opposing forces:</p>
