@@ -20,7 +20,7 @@ $$ $$
 r_{BC} = \sum_i(\frac{1}{2})^{(n_i+m_i)}\frac{1 + f_{A_i}}{\sqrt{(1 + f_{B_i})(1 +f_{C_i})}} 
 $$
 
-For example, the relationship coefficient between two non-inbred siblings will be the product of the path coefficients of between each child and their father plus the product of the path coefficients of each child and their mother. Since $f$ is 0 in all cases, the fraction on the right side reduces to 1, and we only need to worry about the first half of the equation (i.e., $r_{BC}=\sum_i(\frac{1}{2})^{(n_i+m_i)}$):
+For example, the relationship coefficient between two non-inbred siblings will be the product of the path coefficients between each child and their father plus the product of the path coefficients of each child and their mother. Since $f$ is 0 in all cases, the fraction on the right side reduces to 1, and we only need to worry about the first half of the equation (i.e., $r_{BC}=\sum_i(\frac{1}{2})^{(n_i+m_i)}$):
 
 $$ r_{DE} = P_{AD}  \cdot P_{AE} + P_{BD}  \cdot P_{BE}  = \frac{1}{2} \cdot \frac{1}{2} + \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{2} $$
 
@@ -113,7 +113,7 @@ Inbreeding coefficients originated in the field of animal breeding, where pedigr
 
 ## Inbreeding without pedigrees
 
-In most cases we will have no pedigree to use to calculate $F$. We therefore need a way to infer inbreeding from genotype frequency data. Because $F$ is equivalent to the probability two alleles are identical by descent, the genotype frequency of homozygotes in a fully inbred population is 0 (0% \* $2pq$), while the frequency of each homozygote is equivalent to its respective allele frequency, as the probability of an individual being homozygous is 100% once you account for the frequency of the allele in the population. A partially inbred population will see a reduction in heterozygosity proportional to $F$, leaving a frequency of $2pq$ heterozygotes multiplied by the complement of the inbreeding coefficient. The frequency of the two homozygotes will be a mixture of the predicted frequencies under random mating and those under full inbreeding, weighted by the inbreeding coefficient:
+In most cases we will have no pedigree to use to calculate $F$. We therefore need a way to infer inbreeding from genotype frequency data. Because $F$ is equivalent to the probability two alleles are identical by descent, the genotype frequency of heterozygotes in a fully inbred population is 0 (0% \* $2pq$), while the frequency of each homozygote is equivalent to its respective allele frequency, as the probability of an individual being homozygous is 100% once you account for the frequency of the allele in the population. A partially inbred population will see a reduction in heterozygosity proportional to $F$, leaving a frequency of $2pq$ heterozygotes multiplied by the complement of the inbreeding coefficient. The frequency of the two homozygotes will be a mixture of the predicted frequencies under random mating and those under full inbreeding, weighted by the inbreeding coefficient:
 
 |                  | F       | $A_1A_1$                       | $A_1A_2$   | $A_2A_2$                       |
 |:---------------|:-------------|:-------------|:-------------|:-------------|
@@ -159,7 +159,7 @@ In a vaccuum, inbreeding itself would not be particularly interesting. It is its
 |:-----------------|:--------------|:------------|:---------------|
 | random mating    | $p^2a$        | $2pqd$      | $-q^2a$        |
 | fully inbred     | $pa$          | $0$         | $-qa$          |
-| partially inbred | $p^2a + Fpqa$ | $2pqd(1-F)$ | $-q^2a + Fqpa$ |
+| partially inbred | $p^2a + Fpqa$ | $2pqd(1-F)$ | $-q^2a - Fqpa$ |
 
 From this, we can determine that the mean trait value deviation of a randomly mating population ($M_0$) from the midpoint of the two homozygotes is:
 
@@ -177,7 +177,7 @@ $$ $$
 M_F =  a(p^2-q^2) + 2pqd - 2pqdF = a(p+q)(p-q) + 2pqd - 2pqdF = a(p-q) + 2pqd - 2pqdF
 $$
 
-Because $a(p-q) + 2pqd=M_0$, $M_F=M_0 - 2pqdF$. In this equation, the term $2pqdF$ represents inbreeding depression, which we denote as $\delta$. Inbreeding depression is thus the degree to quick the average trait value of the poulation is depressed below random mating expectations.
+Because $a(p-q) + 2pqd=M_O$, $M_F=M_O - 2pqdF$. In this equation, the term $2pqdF$ represents inbreeding depression, which we denote as $\delta$. Inbreeding depression is thus the degree to which the average trait value of the population is depressed below random mating expectations.
 
 This tells us a few other things too:
 
